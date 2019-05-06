@@ -1,0 +1,96 @@
+<openerp>
+    <data>
+		<record id="hr_holidays_view_tree_itis" model="ir.ui.view">
+            <field name="name">hr_holidays_view_tree_itis</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.view_holiday"/>
+            <field name="arch" type="xml">
+				<field name="date_from" position="attributes">
+					<attribute name="widget">date</attribute>
+				</field>
+				<field name="date_to" position="attributes">
+					<attribute name="widget">date</attribute>
+				</field>
+			</field>
+		</record>
+
+
+        <record id="hr_holidays_view_form_itis" model="ir.ui.view">
+            <field name="name">hr_holidays_view_form_itis</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_new"/>
+            <field name="arch" type="xml">
+            	<field name="employee_id" position="attributes">
+					<attribute name="readonly">True</attribute>
+            		<attribute name="groups">base.group_user</attribute>
+            	</field>
+            	<button name="validate" position="attributes">
+            		<attribute name="groups">base.group_user</attribute>
+            	</button>
+            	<button name="refuse" position="attributes">
+            		<attribute name="groups">base.group_user</attribute>
+            	</button>
+            	<field name="holiday_status_id" position="after">
+					<!--<field name="leave_selection" on_change="onchange_leave_type(date_to, date_from,leave_selection)"/>-->
+					<!--<field name="half_day_type" attrs="{'invisible':[('leave_selection','=', 'full_day')],'required':[('leave_selection','=', 'half_day')]}"/>-->
+            		<field name="is_ot_leave" invisible="1"/>
+            	</field>
+
+				<field name="holiday_status_id" position="attributes">
+					<attribute name="domain">[('is_holiday', '!=',True)]</attribute>
+            	</field>
+				<label string="-" position="replace"/>
+				<field name="date_from" position="replace">
+					<field name="date_from" nolabel="1" on_change="onchange_date_from(date_to, date_from)" attrs="{'required':[('type', '=', 'remove')]}" class="oe_inline" widget='date'/>
+					<field name="leave_selection" nolabel="1" class="oe_inline" required="1"/>
+					<!--<field name="date_from" nolabel="1" on_change="onchange_date_from(date_to, date_from,leave_selection)" attrs="{'required':[('type', '=', 'remove')]}" class="oe_inline" widget = 'date'/>-->
+					<field name="half_day_type" attrs="{'invisible':[('leave_selection','=', 'full_day')],'required':[('leave_selection','=', 'half_day')]}" class="oe_inline" nolabel="1"/>
+            	</field>
+				<field name="date_to" position="replace">
+					<field name="date_to" nolabel="1" on_change="onchange_date_to(date_to, date_from)"  attrs="{'required':[('type', '=', 'remove')]}" class="oe_inline"  widget ='date'/>
+						<field name="leave_selection_date_to" nolabel="1" class="oe_inline" attrs="{'invisible':[('leave_sele_dateto_flag','=', True)],'required':[('leave_sele_dateto_flag','=', False)]}"/>
+					<!--<field name="date_to" nolabel="1" on_change="onchange_date_to(date_to, date_from,leave_selection)"  attrs="{'required':[('type', '=', 'remove')]}" class="oe_inline" widget = 'date'/>-->
+					<field name="half_day_type_date_to" attrs="{'invisible':[('leave_selection_date_to','=', 'full_day')],'required':[('leave_selection_date_to','=', 'half_day')]}" class="oe_inline" nolabel="1"/>
+            	</field>
+            	<field name="department_id" position="after">
+					<field name="leave_sele_dateto_flag" invisible="1"/>
+            		<field name="approved_by" readonly="1"/>
+            		<field name="approved_at" readonly="1"/>
+            		<field name="sum_leaves" />
+            		<field name="sum_leaves_ny" />
+            		<field name="number_of_days_temp_ny" />
+            		<field name="ot_hours" widget="float_time"/>
+            	</field>
+            	<xpath expr="//group//group//div" postion='after'>
+            		<!--<div attrs="{'invisible':[('is_ot_leave','=', False)]}">-->
+					<div>
+						<field name="leave_hours" widget="float_time" class="oe_inline"/>hours
+					</div>
+            	</xpath>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="edit_holiday_status_form_inherit_itis">
+            <field name="name">hr.holidays.status.form.inherit.itis</field>
+            <field name="model">hr.holidays.status</field>
+			<field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+			<field name="arch" type="xml">
+
+				<field name="name" position="after">
+            		<field name="is_holiday"/>
+					<field name="is_sick_leave_type"/>
+            	</field>
+				<!--<xpath expr="//field[@name='name']" postion='after'>-->
+					<!--<field name="is_holiday"/>-->
+            	<!--</xpath>-->
+			</field>
+		</record>
+
+		<record id="hr_holidays.menu_request_approve_holidays" model="ir.ui.menu">
+			<field name="groups_id" eval="[(4,ref('base.group_user'))]"></field>
+		</record>
+		<delete model="ir.ui.menu" id="hr_holidays.menu_open_allocation_holidays"/>
+		<delete model="ir.ui.menu" id="hr_holidays.menu_request_approve_allocation"/>
+		<!--<menuitem name="Leave Requests to Approve" parent="hr_holidays.menu_open_ask_holidays" id="menu_request_approve_holidays" action="hr_holidays.request_approve_holidays" groups="base.group_user"/>-->
+    </data>
+</openerp>

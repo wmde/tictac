@@ -1,0 +1,624 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* itis_hr_attendance_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-19 13:19+0000\n"
+"PO-Revision-Date: 2017-09-19 15:22+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: itis_hr_attendance_extend
+#: model:email.template,body_html:itis_hr_attendance_extend.email_template_monthly_timesheet_overview
+msgid ""
+"\n"
+"\t\t\t<p>Sehr geehrte Kollegen,</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>anbei erhalten Sie den aktuellen Report zur Kostenstellenübersicht "
+"nach Mitarbeiter.\n"
+"\t\t\t</p><br/>\n"
+"\t\t\t<p>Mit freundlichen Grüßen</p>\n"
+"\t\t\t<p>Ihr HR-Team</p>\n"
+"\t\t\t\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t<p>Sehr geehrte Kollegen,</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>anbei erhalten Sie den aktuellen Report zur Kostenstellenübersicht "
+"nach Mitarbeiter.\n"
+"\t\t\t</p><br/>\n"
+"\t\t\t<p>Mit freundlichen Grüßen</p>\n"
+"\t\t\t<p>Ihr HR-Team</p>\n"
+"\t\t\t\n"
+"\t\t\t"
+
+#. module: itis_hr_attendance_extend
+#: field:account.analytic.account,account_code:0
+msgid "Account Code"
+msgstr "Kürzel Kostenstelle"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:453
+#, python-format
+msgid "Actual Overttime Count"
+msgstr "Über-/Unterstunden"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/static/src/xml/templates.xml:58
+#, python-format
+msgid "Add"
+msgstr "Hinzufügen"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/static/src/xml/templates.xml:64
+#, python-format
+msgid "Add a Line"
+msgstr "Zeile hinzufügen"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/static/src/js/hr_extend.js:125
+#, python-format
+msgid "Add comment"
+msgstr "Add comment"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.model,name:itis_hr_attendance_extend.model_account_analytic_account
+#: field:sign.in.task,analytic_account_id:0
+msgid "Analytic Account"
+msgstr "Kostenstelle"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Analytic account"
+msgstr "Kostenstelle"
+
+#. module: itis_hr_attendance_extend
+#: field:hr.attendance,timesheet_id:0
+msgid "Anlytic Timesheet"
+msgstr "Zeiterfassung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Approve"
+msgstr "Genehmige"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.model,name:itis_hr_attendance_extend.model_hr_attendance
+msgid "Attendance"
+msgstr "Anwesenheit"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Attendances"
+msgstr "Anwesenheitszeiten"
+
+#. module: itis_hr_attendance_extend
+#: view:sign.in.task:itis_hr_attendance_extend.sign_in_task_form_view
+#: view:timesheet.overview.export:itis_hr_attendance_extend.timesheet_overview_export_form_view
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: itis_hr_attendance_extend
+#: view:timesheet.overview.export:itis_hr_attendance_extend.timesheet_overview_export_form_view
+msgid "Click 'Export' button to export timesheet overview csv"
+msgstr ""
+"Auf 'Export' klicken um die Übersicht der Zeiterfassungen als CSV zu "
+"exportieren"
+
+#. module: itis_hr_attendance_extend
+#: field:hr.analytic.timesheet,emp_comment:0 field:sign.in.task,emp_comment:0
+msgid "Comment"
+msgstr "Kommentar"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.actions.act_window,name:itis_hr_attendance_extend.act_hr_timesheet_sheet
+#: model:ir.ui.menu,name:itis_hr_attendance_extend.menu_act_hr_timesheet_sheet_form_my_current_editable
+msgid "Create Timesheet"
+msgstr "Timesheet anlegen"
+
+#. module: itis_hr_attendance_extend
+#: field:itis.holiday,create_uid:0 field:planned.hours,create_uid:0
+#: field:service.description,create_uid:0 field:sign.in.task,create_uid:0
+#: field:timesheet.overview.export,create_uid:0
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: itis_hr_attendance_extend
+#: field:itis.holiday,create_date:0 field:planned.hours,create_date:0
+#: field:service.description,create_date:0 field:sign.in.task,create_date:0
+#: field:timesheet.overview.export,create_date:0
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: itis_hr_attendance_extend
+#: field:itis.holiday,date:0 field:planned.hours,sheet_date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Date From"
+msgstr "Von"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Date To"
+msgstr "Bis"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:86
+#, python-format
+msgid "Date should be between timesheet date."
+msgstr "Das Datum muss innerhalb des Datumsbereichs liegen."
+
+#. module: itis_hr_attendance_extend
+#: field:hr.analytic.timesheet,dept_account_id:0
+msgid "Dept. Analytic Account"
+msgstr "Kostenstelle Bereich"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Dept. Analytic account"
+msgstr "Kostenstelle Bereich"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Details"
+msgstr "Details"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Differences"
+msgstr "Differenzen"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.model,name:itis_hr_attendance_extend.model_hr_employee
+msgid "Employee"
+msgstr "Mitarbeiter/-in"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.actions.act_window,name:itis_hr_attendance_extend.emp_service_description_action
+msgid "Employee Service Description"
+msgstr "Leistung"
+
+#. module: itis_hr_attendance_extend
+#: view:timesheet.overview.export:itis_hr_attendance_extend.timesheet_overview_export_form_view
+msgid "Export"
+msgstr "Export"
+
+#. module: itis_hr_attendance_extend
+#: view:timesheet.overview.export:itis_hr_attendance_extend.timesheet_overview_export_form_view
+msgid "Export file:"
+msgstr "Export Datei:"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/wizard/hr_timesheet_overview_export.py:97
+#, python-format
+msgid "Exported Timsheet Overview"
+msgstr "exportierter Zeiterfassungsbericht"
+
+#. module: itis_hr_attendance_extend
+#: field:timesheet.overview.export,file_name:0
+msgid "File"
+msgstr "File"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "Geplante Stunden"
+msgstr "Geplante Stunden"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Group By"
+msgstr "Gruppierung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "Group by month of date"
+msgstr "nach Monat gruppieren"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "Group by week of date"
+msgstr "nach Woche gruppieren"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "Group by year of date"
+msgstr "nach Jahr gruppieren"
+
+#. module: itis_hr_attendance_extend
+#: model:hr.holidays.status,name:itis_hr_attendance_extend.itis_holiday_leave_type_new
+#: view:itis.holiday:itis_hr_attendance_extend.view_calendar_itis_holiday
+msgid "Holiday"
+msgstr "Urlaub"
+
+#. module: itis_hr_attendance_extend
+#: field:hr.holidays,holiday_name:0 field:itis.holiday,name:0
+msgid "Holiday Name"
+msgstr "Feiertag"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.actions.act_window,name:itis_hr_attendance_extend.act_itis_holiday
+#: model:ir.ui.menu,name:itis_hr_attendance_extend.menu_itis_holiday
+msgid "Holidays"
+msgstr "Feiertage"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+#: field:planned.hours,duration:0
+msgid "Hours"
+msgstr "Stunden"
+
+#. module: itis_hr_attendance_extend
+#: field:itis.holiday,id:0 field:planned.hours,id:0
+#: field:service.description,id:0 field:sign.in.task,id:0
+#: field:timesheet.overview.export,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: itis_hr_attendance_extend
+#: field:itis.holiday,write_uid:0 field:planned.hours,write_uid:0
+#: field:service.description,write_uid:0 field:sign.in.task,write_uid:0
+#: field:timesheet.overview.export,write_uid:0
+msgid "Last Updated by"
+msgstr "Aktualisiert von"
+
+#. module: itis_hr_attendance_extend
+#: field:itis.holiday,write_date:0 field:planned.hours,write_date:0
+#: field:service.description,write_date:0 field:sign.in.task,write_date:0
+#: field:timesheet.overview.export,write_date:0
+msgid "Last Updated on"
+msgstr "Aktualisiert am"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.model,name:itis_hr_attendance_extend.model_hr_holidays
+msgid "Leave"
+msgstr "Urlaub"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_holiday.py:90
+#, python-format
+msgid "Leave Request"
+msgstr "Leave Request"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "Month"
+msgstr "Monat"
+
+#. module: itis_hr_attendance_extend
+#: model:email.template,subject:itis_hr_attendance_extend.email_template_monthly_timesheet_overview
+msgid "Monthly Timesheet Overview Report"
+msgstr "Monatlicher Bericht der Zeiterfassungen"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_payroll.py:58
+#, python-format
+msgid "Normal Working Days paid at 100%"
+msgstr "Normaler Arbeitstag bezahlt zu 100%"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:458
+#: code:addons/itis_hr_attendance_extend/static/src/xml/templates.xml:101
+#, python-format
+msgid "Overtime Hours"
+msgstr "Überstunden"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.model,name:itis_hr_attendance_extend.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Mitarbeitervergütung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Period"
+msgstr "Periode"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:452
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:456
+#: code:addons/itis_hr_attendance_extend/static/src/xml/templates.xml:88
+#: field:hr_timesheet_sheet.sheet,planned_ids:0
+#, python-format
+msgid "Planned Hours"
+msgstr "Geplante Stunden"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/wizard/sign_in_task.py:55
+#, python-format
+msgid "Please define cost unit for this employee."
+msgstr "Bitte tragen Sie die Kostenstelle für den Mitarbeiter ein."
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Product"
+msgstr "Produkt"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Refuse"
+msgstr "Zurücksetzen"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/static/src/js/hr_extend.js:117
+#, python-format
+msgid "Select Service Description"
+msgstr "Leistung auswählen"
+
+#. module: itis_hr_attendance_extend
+#: field:hr.analytic.timesheet,service_desc_id:0
+#: field:sign.in.task,service_desc_id:0
+msgid "Service Desc"
+msgstr "Leistung"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.ui.menu,name:itis_hr_attendance_extend.menu_emp_service_description
+#: view:service.description:itis_hr_attendance_extend.itis_service_description_form
+#: view:service.description:itis_hr_attendance_extend.itis_service_description_tree
+#: field:service.description,name:0
+msgid "Service Description"
+msgstr "Leistung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Set to Draft"
+msgstr "Setze auf Entwurf"
+
+#. module: itis_hr_attendance_extend
+#: field:planned.hours,sheet_id:0
+msgid "Sheet"
+msgstr "Tabelle"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Sign In"
+msgstr "Anmelden"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Sign Out"
+msgstr "Abmelden"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:297
+#, python-format
+msgid "Start date and end date have to be the same day."
+msgstr "Start und Enddatum müssen derselbe Tag sein."
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Submit to Manager"
+msgstr "Dem Manager vorlegen"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "Summe Stunden"
+msgstr "Summe Stunden"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_holiday.py:38
+#, python-format
+msgid "The start date must be anterior to the end date."
+msgstr "Das startdatum muss vor dem Enddatum liegen."
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:451
+#, python-format
+msgid "Time Diffrence"
+msgstr "Zeit Differenz"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: field:hr_timesheet_sheet.sheet,timesheet_ids2:0
+#: model:ir.model,name:itis_hr_attendance_extend.model_hr_timesheet_sheet_sheet
+msgid "Timesheet"
+msgstr "Stundenzettel"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Timesheet Activities"
+msgstr "Zeiterfassungsaktivitäten"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.actions.server,name:itis_hr_attendance_extend.ir_actions_server_hr_timesheet_overview_manager
+#: model:ir.ui.menu,name:itis_hr_attendance_extend.menu_hr_timesheet_overview_manager
+msgid "Timesheet Activities Manager"
+msgstr "Zeiterfassung Übersicht"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.actions.act_window,name:itis_hr_attendance_extend.act_hr_timesheet_overview
+#: model:ir.ui.menu,name:itis_hr_attendance_extend.menu_hr_timesheet_overview
+msgid "Timesheet Activities Overview"
+msgstr "Bericht Zeiterfassung"
+
+#. module: itis_hr_attendance_extend
+#: field:timesheet.overview.export,name:0
+msgid "Timesheet CSV"
+msgstr "Timesheet CSV"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.model,name:itis_hr_attendance_extend.model_hr_analytic_timesheet
+msgid "Timesheet Line"
+msgstr "Zeiterfassung Positionen"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Timesheet Month"
+msgstr "monatliche Zeiterfassung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.view_timehseet_activity_overview_tree
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.view_timehseet_activity_overview_tree_manager
+msgid "Timesheet Overview"
+msgstr "Zeiterfassung Übersicht"
+
+#. module: itis_hr_attendance_extend
+#: model:ir.actions.act_window,name:itis_hr_attendance_extend.launch_timesheet_overview_export_wizard
+#: model:ir.actions.act_window,name:itis_hr_attendance_extend.timehseet_overview_export_action
+msgid "Timesheet Overview Export"
+msgstr "Zeiterfassung Übersicht Export"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Timesheet Period"
+msgstr "Zeiterfassungsperiode"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Timesheet Summary"
+msgstr "Zusammenfassung"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "Timesheet abschließen"
+msgstr "Timesheet abschließen"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Timesheet by Month"
+msgstr "Zeiterfassung nach Monat"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "Timesheets"
+msgstr "Zeiterfassung"
+
+#. module: itis_hr_attendance_extend
+#. openerp-web
+#: code:addons/itis_hr_attendance_extend/static/src/xml/templates.xml:31
+#: code:addons/itis_hr_attendance_extend/static/src/xml/templates.xml:65
+#, python-format
+msgid "Total"
+msgstr "Total"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:457
+#, python-format
+msgid "Total Hours"
+msgstr "Summe Stunden"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:450
+#, python-format
+msgid "Total Planned Hours"
+msgstr "Arbeitszeit-Soll"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "Total time"
+msgstr "Total time"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+msgid "True"
+msgstr "True"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/wizard/sign_in_task.py:55
+#, python-format
+msgid "User Error!"
+msgstr "Benutzerfehler!"
+
+#. module: itis_hr_attendance_extend
+#: view:hr.analytic.timesheet:itis_hr_attendance_extend.hr_timesheet_overview_search
+msgid "Users"
+msgstr "Benutzer"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_holiday.py:38
+#, python-format
+msgid "Warning!"
+msgstr "Warning!"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "Week"
+msgstr "Woche"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "Year"
+msgstr "Jahr"
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:299
+#, python-format
+msgid "You can only create one timesheet each day."
+msgstr "Es darf pro Tag nur eine Zeiterfassung existieren."
+
+#. module: itis_hr_attendance_extend
+#: code:addons/itis_hr_attendance_extend/models/hr_timesheet_sheet.py:305
+#, python-format
+msgid "You do not have pemission to create timesheets!"
+msgstr "Sie haben keine Berechtigung Timesheets anzulegen!"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.view_hr_timesheet_sheet_filter_inherit
+msgid "[('date_from', '>=',self)]"
+msgstr "[('date_from', '>=',self)]"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_sheet_form_inherited
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "false"
+msgstr "false"
+
+#. module: itis_hr_attendance_extend
+#: view:sign.in.task:itis_hr_attendance_extend.sign_in_task_form_view
+#: view:timesheet.overview.export:itis_hr_attendance_extend.timesheet_overview_export_form_view
+msgid "or"
+msgstr "oder"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_form_editable_itis_new
+msgid "to"
+msgstr "to"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "total_contract_time"
+msgstr "total_contract_time"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "total_overtime_time"
+msgstr "total_overtime_time"
+
+#. module: itis_hr_attendance_extend
+#: view:hr_timesheet_sheet.sheet:itis_hr_attendance_extend.hr_timesheet_sheet_tree_simplified_inherit_itis
+msgid "Überstunden"
+msgstr "Überstunden"

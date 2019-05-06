@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_planned_hours,access_planned_hours,model_planned_hours,,1,1,1,1
+access_itis_holiday,access_itis_holiday,model_itis_holiday,base.group_user,1,0,0,0
+access_itis_holiday_officer,access_itis_holiday_officer,model_itis_holiday,base.group_hr_user,1,1,1,1
+access_service_des_read,access_service_desc_read,model_service_description,base.group_user,1,0,0,0
+access_service_des_officer,access_service_des_officer,model_service_description,base.group_hr_user,1,1,1,1
+access_service_des_manager,access_service_des_manager,model_service_description,base.group_hr_manager,1,1,1,1

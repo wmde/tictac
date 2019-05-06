@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+        <record id="hr_timesheet_sheet_sheet_form_inherited" model="ir.ui.view">
+            <field name="name">hr_timesheet_sheet_sheet_form_inherited</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="inherit_id" ref="hr_timesheet_sheet.hr_timesheet_sheet_form"/>
+            <field name="arch" type="xml">
+				<xpath expr="//form" position="attributes">
+					<attribute name="create">false</attribute>
+				</xpath>
+            	<button name="cancel" position="replace">
+            		<button name="action_cancel" states="confirm" string="Refuse" type="object" groups="base.group_hr_user"/>
+            	</button>
+				<field name='employee_id' position="attributes">
+					<attribute name="readonly">True</attribute>
+				</field>
+            	<field name='name' position="before">
+            		<label for="actual_ot" />
+            		<div>
+	            		<b><field name='actual_ot' widget="float_time" options="{'from_itis':True}"/></b>
+            		</div>
+            	</field>
+            	<field name="total_attendance" position="attributes">
+            		<attribute name="invisible">1</attribute>
+            	</field>
+				<xpath expr="//field[@name='date_from']/parent::div" position="replace">
+					<div><field name="date_from" class="oe_inline" readonly="1"/> <field name="date_to" class="oe_inline" invisible="1"/></div>
+				</xpath>
+           		<field name="total_attendance" position="after">
+           			<label for="total_contract_time"/>
+           			<div>
+           			  	<field name="total_contract_time" widget="float_time" class='oe_inline'/>
+           			  	<button name="calc_planned_hours" type="object" string='Refresh' class='oe_link'/>
+           			</div>
+           		</field>
+           		<field name="total_timesheet" position="after">
+           			<field name="time_diff" widget="float_time"/>
+           		</field>
+           		<field name="total_difference" position='attributes'>
+           			<attribute name="invisible">1</attribute>
+           		</field>
+           		<field name="total_difference" position='after'>
+           			<field name="planned_ids" invisible="1">
+           				<tree>
+           					<field name="sheet_date"/>
+           					<field name="duration"/>
+           				</tree>
+           			</field>
+           		</field>
+
+
+
+				<xpath expr="//button[@name='%(hr_timesheet_sheet.act_hr_timesheet_sheet_sheet_2_hr_analytic_timesheet)d']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//button[@name='%(hr_timesheet_sheet.act_hr_timesheet_sheet_sheet_2_hr_attendance)d']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//page[@string='Attendances']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+
+
+
+				<button name="button_confirm" position="attributes">
+					<attribute name="string">Timesheet abschließen</attribute>
+					<attribute name="invisible">True</attribute>
+				</button>
+				<button string="Sign In" position="replace"/>
+           		<button string="Sign Out" position="replace"/>
+
+				<xpath expr="//field[@name='timesheet_ids']/tree/field[@name='account_id']" position="after">
+					<field name="service_desc_id" widget="selection"/>
+					<field name="emp_comment"/>
+                </xpath>
+
+				<!--hide the timesheet js view -->
+				<xpath expr="//page[@string='Summary']" position="replace"/>
+
+				<!--Add a view which is same as the detial view with same many2one-->
+				<xpath expr="//page[@string='Details']" position="before">
+					<page string="Timesheet Summary">
+						<field context="{'employee_id': employee_id, 'user_id':user_id, 'timesheet_date_from': date_from, 'timesheet_date_to': date_to}"
+							   name="timesheet_ids2" nolabel="1" attrs="{'readonly': [('state', 'not in', ['draft','new'])]}" >
+							<tree editable="bottom" string="Timesheet Activities" delete="false">
+								<field name="date" required="1"/>
+								<field options='{"no_open":1,"no_create":1,"no_create_edit":1}' domain="[('type','in',['normal', 'contract']), ('state', '&lt;&gt;', 'close'),('use_timesheets','=',1)]" name="account_id" on_change="on_change_account_id(account_id, user_id)" context="{'default_use_timesheets': 1}"/>
+								<field name="service_desc_id" options='{"no_create":1,"no_create_edit":1,"no_open":1}'/>
+								<field name="emp_comment"/>
+								<field name="name" required="0" invisible="1"/>
+								<field name="unit_amount" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)" widget="float_time" string="Hours" sum="Hours"/>
+								<field name="to_invoice" widget="selection" invisible="1"/>
+								<field invisible="1" name="journal_id"/>
+								<field invisible="1" name="product_id" domain="[('type','=','service')]" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)"/>
+								<field invisible="1" name="product_uom_id" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)"/>
+								<field invisible="1" name="amount"/>
+								<field invisible="1" name="general_account_id"/>
+								<field invisible="1" name="user_id" required="1"/>
+							</tree>
+						</field>
+						<group>
+							<div class="oe_right" style="text-align: right;" name="tot_hours">
+								<group class="oe_right" style="text-align: right;" name="tot_hours">
+									<field name="total_timesheet_hours" widget="float_time"/>
+									<field name="total_planned_hours" widget="float_time"/>
+									<field name="overtime_hours" widget="float_time"/>
+								</group>
+							</div>
+						</group>
+					</page>
+				</xpath>
+
+            </field>
+        </record>
+
+
+		<!-- hr anlaytic tree view editable-->
+		<record model="ir.ui.view" id="hr_timesheet_line_tree_inherit_itis">
+            <field name="name">hr.analytic.timesheet.tree.itis</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='account_id']" position="after">
+					<field name="dept_account_id"/>
+					<!--<button name = "get_monthly_timesheet_overview" type="object" string="Get"/>-->
+                    <field name="service_desc_id" widget="selection"/>
+					<field name="emp_comment"/>
+                </xpath>
+            </field>
+        </record>
+
+		<!--timesheet tree view-->
+		<record model="ir.ui.view" id="hr_timesheet_sheet_tree_simplified_inherit_itis">
+            <field name="name">hr.timesheet.sheet.tree.simplified.itis</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="inherit_id" ref="hr_timesheet_sheet.hr_timesheet_sheet_tree_simplified"/>
+			<field eval="12" name="priority"/>
+            <field name="arch" type="xml">
+
+               <xpath expr="//tree" position="attributes">
+					<attribute name="create">false</attribute>
+				</xpath>
+
+
+				<xpath expr="//field[@name='total_attendance']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='total_timesheet']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='total_difference']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='department_id']" position="after">
+					<field name="total_timesheet"  sum="Total time" widget="float_time" string="Summe Stunden"/>
+					<field name="total_contract_time"  widget="float_time" string="Geplante Stunden" sum="total_contract_time"/>
+					<field name="time_diff"  widget="float_time" string="Überstunden" sum="total_overtime_time"/>
+				</xpath>
+
+            </field>
+        </record>
+
+		<!--timesheet search view-->
+		<record id="view_hr_timesheet_sheet_filter_inherit" model="ir.ui.view">
+            <field name="name">hr_timesheet_sheet.sheet.filter,inherit</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+			<field name="inherit_id" ref="hr_timesheet_sheet.view_hr_timesheet_sheet_filter"/>
+            <field name="arch" type="xml">
+				<xpath expr="//field[@name='date_from']" position="after">
+					<field name="date_to" filter_domain ="[('date_to', '&lt;=',self)]"/>
+				</xpath>
+				<xpath expr="//field[@name='date_from']" position="attributes">
+						<attribute name="filter_domain">[('date_from', '&gt;=',self)]</attribute>
+				</xpath>
+
+				<xpath expr="//filter[@string='Department']" position="after">
+					<filter string="Week"  domain="[]" context="{'group_by':'date_to:week'}" help="Group by week of date"/>
+					<filter string="Month" domain="[]" context="{'group_by':'date_to:month'}" help="Group by month of date"/>
+					<filter string="Year"  domain="[]" context="{'group_by':'date_to:year'}" help="Group by year of date"/>
+				</xpath>
+
+			</field>
+		</record>
+
+
+		<!--another view for the timesheet edited and create for HR and admin-->
+		<!--timesheet tree view-->
+		<!--<record model="ir.ui.view" id="hr_timesheet_sheet_tree_editable">-->
+            <!--<field name="name">hr.timesheet.sheet.tree.editalbe.itis</field>-->
+            <!--<field name="model">hr_timesheet_sheet.sheet</field>-->
+			<!--<field eval="15" name="priority"/>-->
+            <!--<field name="arch" type="xml">-->
+				<!--<tree colors="blue:state == 'draft';black:state in ('confirm','new');gray:state == 'done'" string="Timesheets">-->
+                    <!--<field name="employee_id"/>-->
+                    <!--<field name="date_from"/>-->
+                    <!--<field name="date_to"/>-->
+                    <!--<field name="department_id" invisible="1"/>-->
+					<!--<field name="total_timesheet"  sum="Total time" widget="float_time" string="Summe Stunden"/>-->
+					<!--<field name="total_contract_time"  widget="float_time" string="Geplante Stunden" sum="total_contract_time"/>-->
+					<!--<field name="time_diff"  widget="float_time" string="Überstunden" sum="total_overtime_time"/>-->
+					<!--<field name="state"/>-->
+				<!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+		<!--timesheet new editalble and create form view-->
+		<record id="hr_timesheet_sheet_form_editable_itis_new" model="ir.ui.view">
+            <field name="name">hr.timesheet.sheet.form.editable.itis.new</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="arch" type="xml">
+				<form string="Timesheet">
+                <header>
+                    <button name="button_confirm" states="draft" string="Submit to Manager" type="object" class="oe_highlight" invisible="1"/>
+                    <button name="done" states="confirm" string="Approve" type="workflow" groups="base.group_hr_user" class="oe_highlight"/>
+                    <button name="action_set_to_draft" states="done" string="Set to Draft" type="object" />
+					<button name="action_cancel" states="confirm" string="Refuse" type="object" groups="base.group_hr_user"/>
+                    <button name="cancel" states="confirm" string="Refuse" type="workflow" groups="base.group_hr_user" invisible="1" />
+                    <field name="state" widget="statusbar" statusbar_visible="new,confirm,done"/>
+                </header>
+                <sheet>
+
+                    <div class="oe_title">
+                        <label for="employee_id" class="oe_edit_only"/>
+                        <h1><field name="employee_id" on_change="onchange_employee_id(employee_id)" class="oe_inline"/></h1>
+                        <field name="user_id" invisible="1"/>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="date_from" string="Timesheet Period"/>
+                            <div><field name="date_from" class="oe_inline"/> to <field name="date_to" class="oe_inline"/></div>
+							<label for="actual_ot" />
+							<div>
+								<b><field name='actual_ot' widget="float_time" options="{'from_itis':True}"/></b>
+							</div>
+                            <field name="name" invisible="1"/>
+                            <field name="department_id" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group groups="base.group_hr_attendance">
+                            <field name="total_attendance" widget="float_time" invisible="1"/>
+							<label for="total_contract_time"/>
+							<div>
+								<field name="total_contract_time" widget="float_time" class='oe_inline'/>
+								<button name="calc_planned_hours" type="object" string='Refresh' class='oe_link'/>
+							</div>
+                            <field name="total_timesheet" widget="float_time"/>
+							<field name="time_diff" widget="float_time"/>
+                            <field name="total_difference" widget="float_time" invisible="1"/>
+							<field name="planned_ids" invisible="1">
+							<tree>
+								<field name="sheet_date"/>
+								<field name="duration"/>
+							</tree>
+           			</field>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Summary" invisible="1">
+                            <widget type="weekly_timesheet" attrs="{'readonly': [['state', 'not in', ['new', 'draft']]]}">
+                            </widget>
+                        </page>
+
+						<page string="Timesheet Summary">
+							<field context="{'employee_id': employee_id, 'user_id':user_id, 'timesheet_date_from': date_from, 'timesheet_date_to': date_to}"
+								   name="timesheet_ids2" nolabel="1" attrs="{'readonly': [('state', 'not in', ['draft','new'])]}" >
+								<tree editable="bottom" string="Timesheet Activities" delete="false">
+									<field name="date" required="1"/>
+									<field options='{"no_open":1,"no_create":1,"no_create_edit":1}' domain="[('type','in',['normal', 'contract']), ('state', '&lt;&gt;', 'close'),('use_timesheets','=',1)]" name="account_id" on_change="on_change_account_id(account_id, user_id)" context="{'default_use_timesheets': 1}"/>
+									<field name="service_desc_id" options='{"no_create":1,"no_create_edit":1}'/>
+									<field name="emp_comment"/>
+									<field name="name" required="0" invisible="1"/>
+									<field name="unit_amount" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)" widget="float_time" string="Hours" sum="Hours"/>
+									<field name="to_invoice" widget="selection" invisible="1"/>
+									<field invisible="1" name="journal_id"/>
+									<field invisible="1" name="product_id" domain="[('type','=','service')]" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)"/>
+									<field invisible="1" name="product_uom_id" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)"/>
+									<field invisible="1" name="amount"/>
+									<field invisible="1" name="general_account_id"/>
+									<field invisible="1" name="user_id" required="1"/>
+								</tree>
+							</field>
+							<group>
+								<div class="oe_right" style="text-align: right;" name="tot_hours">
+									<group class="oe_right" style="text-align: right;" name="tot_hours">
+										<field name="total_timesheet_hours" widget="float_time"/>
+										<field name="total_planned_hours" widget="float_time"/>
+										<field name="overtime_hours" widget="float_time"/>
+									</group>
+								</div>
+							</group>
+						</page>
+
+                        <page string="Details">
+                            <field context="{'employee_id': employee_id, 'user_id':user_id, 'timesheet_date_from': date_from, 'timesheet_date_to': date_to}" name="timesheet_ids" nolabel="1">
+                                <tree editable="bottom" string="Timesheet Activities">
+                                    <field name="date"/>
+                                    <field domain="[('type','in',['normal', 'contract']), ('state', '&lt;&gt;', 'close'),('use_timesheets','=',1)]" name="account_id" on_change="on_change_account_id(account_id, user_id)" context="{'default_use_timesheets': 1}"/>
+                                    <field name="service_desc_id" widget="selection"/>
+									<field name="emp_comment"/>
+									<field name="name"/>
+                                    <field name="unit_amount" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)" widget="float_time" string="Hours" sum="Hours"/>
+                                    <field name="to_invoice" widget="selection"/>
+                                    <field invisible="1" name="journal_id"/>
+                                    <field invisible="1" name="product_id" domain="[('type','=','service')]" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)"/>
+                                    <field invisible="1" name="product_uom_id" on_change="on_change_unit_amount(product_id, unit_amount, False, product_uom_id,journal_id)"/>
+                                    <field invisible="1" name="amount"/>
+                                    <field invisible="1" name="general_account_id"/>
+                                    <field invisible="1" name="user_id" required="1"/>
+                                </tree>
+
+                            </field>
+                        </page>
+                        <page string="Attendances" groups="base.group_hr_attendance" invisible="1">
+                            <group>
+                                <field context="{'default_employee_id': employee_id, 'user_id':user_id}" name="attendances_ids" nolabel="1">
+                                    <tree string="Attendances" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="action"/>
+                                        <field invisible="1" name="employee_id"/>
+                                    </tree>
+                                </field>
+                                <group>
+                                    <label for="state_attendance"/>
+                                    <div>
+                                        <field name="state_attendance"/>
+                                        <button name="attendance_action_change" attrs="{'invisible': [('state_attendance', '=', 'present')]}" type="object" string="Sign In" class="oe_link"/>
+                                        <button name="attendance_action_change" attrs="{'invisible': ['|', ('state_attendance','=',False), ('state_attendance', '=', 'absent')]}" type="object" string="Sign Out" class="oe_link"/>
+                                    </div>
+                                </group>
+                            </group>
+                            <field name="period_ids">
+                                <tree colors="red:total_difference&lt;0.1;blue:total_difference&gt;=0.1" string="Period">
+                                    <field name="name"/>
+                                    <field name="total_attendance" widget="float_time" sum="Attendances"/>
+                                    <field name="total_timesheet" widget="float_time" sum="Timesheets"/>
+                                    <field name="total_difference" widget="float_time" sum="Differences"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+                </form>
+			</field>
+		</record>
+		<!--another view for the timesheet edited and create for HR and admin-->
+		<record id="act_hr_timesheet_sheet" model="ir.actions.act_window">
+            <field name="name">Create Timesheet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr_timesheet_sheet.sheet</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<!--<record id="act_hr_timesheet_sheet_tree_new" model="ir.actions.act_window.view">-->
+            <!--<field eval="1" name="sequence"/>-->
+            <!--<field name="view_mode">tree</field>-->
+            <!--<field name="view_id" ref="hr_timesheet_sheet_tree_editable"/>-->
+            <!--<field name="act_window_id" ref="act_hr_timesheet_sheet"/>-->
+        <!--</record>-->
+		<record id="act_hr_timesheet_sheet_form_new" model="ir.actions.act_window.view">
+            <field eval="3" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="hr_timesheet_sheet_form_editable_itis_new"/>
+            <field name="act_window_id" ref="act_hr_timesheet_sheet"/>
+        </record>
+		<!--another view for the timesheet edited and create for HR and admin-->
+		<menuitem name="Create Timesheet" id="menu_act_hr_timesheet_sheet_form_my_current_editable" parent="hr_attendance.menu_hr_time_tracking" action="act_hr_timesheet_sheet" sequence="1" groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+
+		<!-- Inherited Analytic Account form  -->
+        <record id="account_analytic_account_form_form_inherit" model="ir.ui.view">
+            <field name="name">account.analytic.account.invoice.form.inherit.itis</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+            <field eval="40" name="priority"/>
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="currency_id"]' position="after">
+					<field name="account_code"/>
+				</xpath>
+			</field>
+		</record>
+
+
+		<!--add tree view for the timesheet activity overview-->
+		<record id="view_timehseet_activity_overview_tree" model="ir.ui.view">
+            <field name="name">timesheet.activity.overview.tree</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="arch" type="xml">
+                <tree string="Timesheet Overview" create="false" readonly="1">
+					<field name="identification_id"/>
+					<field name="dept_account_code"/>
+					<field name="name"/>
+					<field name="analytic_account_code"/>
+					<field name="date"/>
+					<field name="user_id"/>
+					<field name="unit_amount" widget="float_time"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--add search for the timesheet activity overview-->
+		<record id="hr_timesheet_overview_search" model="ir.ui.view">
+            <field name="name">hr.analytic.timesheet.overview.search</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="arch" type="xml">
+                <search string="Timesheet">
+					<field name="date" filter_domain ="[('date', '&gt;=',self)]" string="Date From"/>
+                    <field name="date" filter_domain ="[('date', '&lt;=',self)]" string="Date To"/>
+                    <field name="user_id"/>
+                    <field name="account_id"/>
+					<field name="dept_account_id"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Users" icon="terp-personal" domain="[]" context="{'group_by':'user_id'}"/>
+                        <filter string="Analytic account" icon="terp-folder-green" domain="[]" context="{'group_by':'account_id'}"/>
+						<filter string="Dept. Analytic account" icon="terp-folder-green" domain="[]" context="{'group_by':'dept_account_id'}"/>
+                        <filter string="Product" icon="terp-accessories-archiver" domain="[]" context="{'group_by':'product_id'}"/>
+                        <filter string="Timesheet Month" icon="terp-go-month" domain="[]" context="{'group_by':'date'}" help="Timesheet by Month"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<!--add action for the timesheet activity overview-->
+		<record id="act_hr_timesheet_overview" model="ir.actions.act_window">
+            <field name="name">Timesheet Activities Overview</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.analytic.timesheet</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{"search_default_today":1}</field>
+			<field name="view_id" ref="view_timehseet_activity_overview_tree"/>
+            <field name="search_view_id" ref="hr_timesheet_overview_search"/>
+        </record>
+
+		<!--add menuitem for the timesheet activity overview-->
+		<menuitem id="menu_hr_timesheet_overview" parent="hr_attendance.menu_hr_time_tracking" action="act_hr_timesheet_overview" />
+
+		<!--add tree view for the timesheet activity overview for manager-->
+		<record id="view_timehseet_activity_overview_tree_manager" model="ir.ui.view">
+            <field name="name">timesheet.activity.overview.tree.manager</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="arch" type="xml">
+                <tree string="Timesheet Overview" create="false" readonly="1">
+					<!--<field name="user_id"/>-->
+					<field name="dept_account_code"/>
+					<field name="analytic_account_code"/>
+					<field name="unit_amount" widget="float_time"/>
+					<!--<field name="name"/>-->
+					<field name="emp_comment"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--add action for the timesheet activity overview for manager, I have user ir.server action to filter the records-->
+		<record id="ir_actions_server_hr_timesheet_overview_manager" model="ir.actions.server">
+            <field name="state">code</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_hr_analytic_timesheet"/>
+            <field name="code">action = model.open_analytic_timesheet_tree()</field>
+            <field name="condition">True</field>
+            <field name="name">Timesheet Activities Manager</field>
+        </record>
+
+		<!--add menuitem for the timesheet activity overview for manager-->
+		<menuitem id="menu_hr_timesheet_overview_manager" parent="hr_attendance.menu_hr_time_tracking" action="ir_actions_server_hr_timesheet_overview_manager"
+			groups='itis_hr_attendance_extend.group_hr_supervisor'/>
+
+		<!--Add menu and action for the service description-->
+		<record id="itis_service_description_form" model='ir.ui.view'>
+			<field name="name">emp.service.description.form</field>
+			<field name="model">service.description</field>
+			<field name="arch" type="xml">
+				<form string="Service Description">
+					<sheet>
+						<group>
+							<field name="name"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="itis_service_description_tree" model='ir.ui.view'>
+			<field name="name">emp.service.description.tree</field>
+			<field name="model">service.description</field>
+			<field name="arch" type="xml">
+				<tree string="Service Description" editable="bottom">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="emp_service_description_action" model="ir.actions.act_window">
+			<field name="name">Employee Service Description</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">service.description</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+
+		<menuitem name="Service Description" parent="hr.menu_hr_configuration" action="emp_service_description_action"
+			id="menu_emp_service_description" groups='base.group_hr_payroll_manager,base.group_hr_manager'/>
+		<menuitem id="hr_timesheet.menu_hr_working_hours" parent="hr_attendance.menu_hr_time_tracking" action="hr_timesheet.act_hr_timesheet_line_evry1_all_form" groups='base.group_hr_payroll_manager,base.group_hr_manager'/>
+
+		<menuitem id="hr_timesheet.menu_create_time_sheets" name="Zeiterfassung erstellen"
+                parent="menu_hr_timesheet_overview"
+                action="act_hr_timesheet_overview"
+				groups='base.group_hr_payroll_manager,base.group_hr_manager'/>
+
+
+	</data>
+</openerp>

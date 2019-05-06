@@ -1,0 +1,59 @@
+.led-green {
+	float: left;
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	background-color: #ABFF00;
+	border-radius: 50%;
+	box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+.led-green-off {
+	float: left;
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	background-color: #304701;
+	border-radius: 50%;
+}
+.led-yellow {
+	float: left;
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	background-color: #FF0;
+	border-radius: 50%;
+	box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;
+}
+.led-yellow-off {
+	float: left;
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	background-color: #808002;
+	border-radius: 50%;
+}
+.led-red {
+	float: left;
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	background-color: #F00;
+	border-radius: 50%;
+	box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+}
+.led-red-off {
+	float: left;
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	background-color: #441313;
+	border-radius: 50%;
+}
+.itis_traffic_light{
+	position: absolute;
+	margin-left: 10px;
+}
+
+.openerp .oe_timesheet_weekly .oe_timesheet_weekend {
+  background: #ffff00;
+}

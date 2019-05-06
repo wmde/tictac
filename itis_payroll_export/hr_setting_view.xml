@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		
+		<record id="view_hr_configuration_inh" model="ir.ui.view">
+            <field name="name">view.hr.configuration.inh</field>
+            <field name="model">hr.config.settings</field>
+            <field name="inherit_id" ref="hr.view_human_resources_configuration"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//group[@name='hr_ot_leave']/div" position="inside">
+					<div>
+						<label for="sick_account_id"
+							class="oe_inline" />
+						<field name="sick_account_id"
+							domain="[('type', 'in', ['normal', 'contract']), ('state', '!=', 'close'), ('use_timesheets', '=', 1)]"
+							options="{'no_open': True, 'no_create': True, 'no_create_edit':True}"
+							class="oe_inline" />
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</openerp>
+		

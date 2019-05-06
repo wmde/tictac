@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+
+		<record id="company_view_form_itis" model="ir.ui.view">
+			<field name="name">company_view_form_itis</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//group[@name='account_grp']" position="after">
+					<group name="sow17" string="Jahreswechsel Testen">
+						<field name="for_sow17"/>
+						<field name="next_year_date" attrs="{'invisible': [('for_sow17','=',False)],'required': [('for_sow17','=',True)]}"/>
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="itis_fte_records_form" model='ir.ui.view'>
+			<field name="name">itis.fte.records.form</field>
+			<field name="model">fte.records</field>
+			<field name="arch" type="xml">
+				<tree string="FTE Records">
+					<field name='department_id' />
+					<field name='planned_fte' />
+					<field name='fte' />
+					<field name='diff_fte' />
+				</tree>
+			</field>
+		</record>
+		
+		<record id="itis_fte_report_tree" model='ir.ui.view'>
+			<field name="name">itis.fte.report.tree</field>
+			<field name="model">fte.report</field>
+			<field name="arch" type="xml">
+				<tree string="FTE Report">
+					<field name='name'/>
+					<field name='create_uid'/>
+				</tree>
+			</field>
+		</record>
+		
+		
+		<record id="itis_fte_report_form" model='ir.ui.view'>
+			<field name="name">itis.fte.report.form</field>
+			<field name="model">fte.report</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name" readonly='1' />
+							</h1>
+						</div>
+						<group>
+							<saperator name='fte_report_field' string="FTE Records" />
+							<field name='fte_ids' colspan='4' nolabel='1' readonly='1'/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="fte_report_action" model="ir.actions.act_window">
+			<field name="name">FTE Report</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">fte.report</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	
+		<menuitem name="Reports" parent="hr.menu_hr_root"
+			id="menu_hr_reports" groups='base.group_user'/>
+	
+		<menuitem name="FTE Reports" parent="menu_hr_reports" action="fte_report_action"
+			id="menu_fte_report" groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+
+
+	</data>
+</openerp>

@@ -1,0 +1,52 @@
+<openerp>
+    <data>
+
+<!-- employee meeting Button on Employee Form -->
+        <record id="act_hr_employee_meeting" model="ir.actions.act_window">
+            <field name="res_model">employee.meeting</field>
+            <field name="view_type">form</field>
+            <field name="name">Employee Meeting</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('employee_id','in',[active_id])]</field>
+            <field name="context">{'search_default_employee_id': [active_id], 'default_employee_id': active_id}</field>
+        </record>
+
+        <record id="employee_meeting_tree" model="ir.ui.view">
+            <field name="name">employee_meeting_tree</field>
+            <field name="model">employee.meeting</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name" required="1"/>
+                    <field name="meeting_date" required="1"/>
+                    <field name="employee_id" invisible="1"/>
+                    <field name="supervisor_id"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- employee instruction Button on Employee Form -->
+        <record id="act_hr_employee_instruction" model="ir.actions.act_window">
+            <field name="res_model">employee.instruction</field>
+            <field name="view_type">form</field>
+            <field name="name">Employee Instruction</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('employee_id','in',[active_id])]</field>
+            <field name="context">{'search_default_employee_id': [active_id], 'default_employee_id': active_id}</field>
+        </record>
+
+        <record id="employee_instruction_tree" model="ir.ui.view">
+            <field name="name">employee_instruction_tree</field>
+            <field name="model">employee.instruction</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name" required="1"/>
+                    <field name="meeting_date" required="1"/>
+                    <field name="employee_id" invisible="1"/>
+                    <field name="supervisor_id"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

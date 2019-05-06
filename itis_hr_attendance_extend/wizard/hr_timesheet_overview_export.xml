@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+		<record id="timesheet_overview_export_form_view" model='ir.ui.view'>
+			<field name="name">timesheet.overview.export.form.view</field>
+			<field name="model">timesheet.overview.export</field>
+			<field name="arch" type="xml">
+				<form>
+					<label string="Click 'Export' button to export timesheet overview csv" />
+					<div attrs="{'invisible': [('name', '=', False)]}">
+                        <p>Export file: <field name="name" readonly="1" filename="file_name"/></p>
+                    </div>
+					<field name='file_name' invisible="1"/>
+					<footer>
+						<button name='export_csv' type='object' string="Export" />
+						or
+						<button special="cancel" string="Cancel" class='oe_link' />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="timehseet_overview_export_action" model="ir.actions.act_window">
+			<field name="name">Timesheet Overview Export</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">timesheet.overview.export</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+
+        <act_window id="launch_timesheet_overview_export_wizard"
+            name="Timesheet Overview Export"
+            src_model="hr.analytic.timesheet"
+            res_model="timesheet.overview.export"
+            view_mode="form,tree"
+            target="new"
+            key2="client_action_multi"
+			groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+
+	</data>
+</openerp>

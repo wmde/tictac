@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+        <template id="assets_backend" name="hr_extend assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+            	<link rel="stylesheet" href="/itis_hr_attendance_extend/static/src/css/traffic_light.css"/>
+                <script type="text/javascript" src="/itis_hr_attendance_extend/static/src/js/hr_extend.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>

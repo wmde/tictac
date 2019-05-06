@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+        <record id="itis_holiday_form_view" model="ir.ui.view">
+            <field name="name">itis_holiday_form_view</field>
+            <field name="model">itis.holiday</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<sheet>
+            			<group>
+            				<field name="name" required="1"/>
+            				<field name="date" required="1"/>
+            			</group>
+            		</sheet>
+            	</form>
+            </field>
+        </record>
+        <record id="itis_holiday_tree_view" model="ir.ui.view">
+            <field name="name">itis_holiday_tree_view</field>
+            <field name="model">itis.holiday</field>
+            <field name="arch" type="xml">
+            	<tree>
+       				<field name="name" required="1"/>
+       				<field name="date" required="1"/>
+            	</tree>
+            </field>
+        </record>
+        <record id="view_calendar_itis_holiday" model="ir.ui.view">
+            <field name="name">Holiday</field>
+            <field name="model">itis.holiday</field>
+            <field name="arch" type="xml">
+                <calendar string="Holiday" color="name"
+                          date_start="date" date_stop="date"
+                          quick_add="False" >
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+        <record id="act_itis_holiday" model="ir.actions.act_window">
+            <field name="name">Holidays</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">itis.holiday</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">calendar,tree,form</field>
+        </record>
+        <menuitem name="Holidays" action="act_itis_holiday" parent="hr_holidays.menu_open_ask_holidays" id="menu_itis_holiday" sequence="1"/>
+    </data>
+</openerp>

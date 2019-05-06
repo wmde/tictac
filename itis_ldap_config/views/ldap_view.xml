@@ -1,0 +1,29 @@
+<openerp>
+    <data>
+
+        <record id="ldap_record_tree" model='ir.ui.view'>
+            <field name="name">ldap.record.tree</field>
+            <field name="model">ldap.record</field>
+            <field name="arch" type="xml">
+                <tree string="Ldap Record" editable="bottom">
+                    <field name="emp_no" string="Employee No"/>
+                    <field name="emp_name" string="Employee Name"/>
+                    <field name="ldap_uname" string="Ldap User name"/>
+                    <field name="cur_uname" string="Current User name"/>
+                    <field name="user_configured" string="User Configured"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="hr_ldap_record_action" model="ir.actions.act_window">
+            <field name="name">Ldap Record</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ldap.record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="LDAP Record" parent="hr.menu_hr_configuration" action="hr_ldap_record_action"
+                  id="menu_ldap_record" groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+    </data>
+</openerp>

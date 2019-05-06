@@ -1,0 +1,126 @@
+<openerp>
+    <data>
+
+		<record id="email_template_monthly_employee_data" model="email.template">
+			<field name="name">Monthly Employee Data</field>
+			<field name="model_id" ref="itis_hr_extend.model_hr_employee" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${(user.email or '') | safe}</field>
+			<field name="subject">Monthly Employee Data Report</field>
+			<field name="body_html"><![CDATA[
+			<p>Sehr geehrte Kollegen,</p>
+			<br/>
+			<p>anbei erhalten Sie den aktuellen Report zur Kostenstellenübersicht nach Mitarbeiter.
+			</p><br/>
+			<p>Mit freundlichen Grüßen</p>
+			<p>Ihr HR-Team</p>
+			]]>
+			</field>
+		</record>
+
+		<record id="email_template_draft_leave_cancel" model="email.template">
+			<field name="name">Urlaub im Status Entwurf abgebrochen</field>
+			<field name="model_id" ref="itis_hr_extend.model_hr_holidays" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">tictac@wikimedia.de</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe},${( object.employee_id.parent_id.work_email)|safe},Personal@wikimedia.de</field>
+			<!--<field name="email_cc">${( object.employee_id.parent_id != False and object.employee_id.parent_id.work_email)|safe}</field>-->
+			<field name="email_cc"></field>
+			<field name="subject">Dein geplanter Urlaubsantrag (aus 2018) im Status Entwurf/Your planned holiday</field>
+			<field name="body_html"><![CDATA[
+            Liebe/r ${object.employee_id.surname},
+            <br><br>
+            wir informieren dich darüber, dass dein geplanter Urlaubsantrag für den ${ctx['date_from']} bis zum ${ctx['date_to']} automatisch aufgrund des Jahreswechsels
+            vom Status “Zu Bestätigen” (Entwurf) in den Status “Abgebrochen” geändert wurde.
+            <br><br>
+            Solltest du weitere Fragen haben, wende dich an das Team Personal.
+            <br>
+            Viele Grüße
+            <br>
+            Dein TicTac Team
+            <br><br>----------------<br><br>
+            Dear ${object.employee_id.surname},
+            <br><br>
+            we kindly inform you that your planned holiday from ${ctx['date_from']} until ${ctx['date_to']} was automatically changed from Status ”To Submit” (Draft)
+            into Status “Refused” due to year change.
+            <br><br>
+            For any questions please contact Team Personal.
+            <br>
+            Best Regards
+            <br>
+            Your TicTac Team
+			]]></field>
+		</record>
+
+		<record id="email_template_toapprove_leave_approve" model="email.template">
+			<field name="name">Urlaub im Status zu genehmigen genehmigt</field>
+			<field name="model_id" ref="itis_hr_extend.model_hr_holidays" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">tictac@wikimedia.de</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe},${( object.employee_id.parent_id.work_email)|safe},Personal@wikimedia.de</field>
+			<!--<field name="email_cc">${( object.employee_id.parent_id != False and object.employee_id.parent_id.work_email)|safe}</field>-->
+			<field name="email_cc"></field>
+			<field name="subject">Dein beantragter Urlaubsantrag (aus 2018) wurde genehmigt/Your requested holiday</field>
+			<field name="body_html"><![CDATA[
+			Liebe/r ${object.employee_id.surname},
+			<br><br>
+			wir informieren dich darüber, dass dein offener Urlaubsantrag für den ${ctx['date_from']} bis zum ${ctx['date_to']} automatisch aufgrund des Jahreswechsels
+			vom Status “Zu genehmigen” in den Status “Genehmigt” geändert wurde und der Urlaub damit freigegeben ist.
+			<br><br>
+			Viele Grüße
+			<br>
+			Dein TicTac Team
+			<br><br>---------<br><br>
+			Dear ${object.employee_id.surname},
+			<br><br>we kindly inform you that your pending holiday request from ${ctx['date_from']} until ${ctx['date_to']} was automatically changed
+			from “To Approve” in Status “Approved” due to year change.
+			<br><br>
+			For any questions please contact Team Personal.
+			<br>
+			Best Regards
+			<br>
+			Your TicTac Team
+			<br><br>
+			]]></field>
+		</record>
+
+		<record id="email_template_remaining_leave_notification" model="email.template">
+			<field name="name">Remaining Leave end Notification</field>
+			<field name="model_id" ref="itis_hr_extend.model_hr_employee" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">tictac@wikimedia.de</field>
+			<field name="email_to">${( object.work_email or object.user_id != False and object.user_id.email )|safe},${( object.parent_id.work_email)|safe},Personal@wikimedia.de</field>
+			<!--<field name="email_cc">${( object.parent_id != False and object.parent_id.work_email)|safe}</field>-->
+			<field name="email_cc"></field>
+			<field name="subject">Benachrichtung über deinen Resturlaub/Information about your carried over holiday</field>
+			<field name="body_html"><![CDATA[
+			Liebe/r ${object.surname},
+			<br><br>
+			du hast ${ctx['remaining_leaves']} Tage Resturlaub aus dem Vorjahr ins neue Jahr übertragen.
+			<br>
+			Der Resturlaub muss bis 31. März genommen worden sein, ansonsten verfällt dieser zum 01. April.
+			<br><br>
+			Solltest du weitere Fragen haben, wende dich an das Team Personal.
+			<br>
+			Viele Grüße
+			<br>
+			Dein TicTac Team
+			<br><br>-------------------<br><br>
+			Dear ${object.surname},
+			<br><br>
+			we kindly inform you have transferred ${ctx['remaining_leaves']} days rest leave from the previous year into the new year.
+			<br>
+			These carried over days must have been taken until March 31st, otherwise it expires on the 1st of April.
+			<br><br>
+			For any questions please contact Team Personal.
+			<br>
+			Best Regards
+			<br>
+			Your TicTac Team
+			]]></field>
+		</record>
+
+    </data>
+
+</openerp>

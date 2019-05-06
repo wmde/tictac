@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+		<record id="sick_leave_form_view" model='ir.ui.view'>
+			<field name="name">sick.leave.form.view</field>
+			<field name="model">hr.sick.leave</field>
+			<field name="arch" type="xml">
+				<form>
+					<p>This wizard is use to fill up the time sheet when employee is sick.</p>
+                    <group>
+                        <field name='start_date' required="1"/>
+                        <field name='end_date' required="1"/>
+                    </group>
+
+					<footer>
+						<button name='confirm_sick_time' type='object' string="Fill Sick Time" />
+						or
+						<button special="cancel" string="Cancel" class='oe_link' />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="sick_leave_action" model="ir.actions.act_window">
+			<field name="name">Fill Sick Leave</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">hr.sick.leave</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+
+        <act_window id="launch_sick_leave_wizard"
+            name="Fill Employee Sick Leave"
+            src_model="hr.employee"
+            res_model="hr.sick.leave"
+            view_mode="form,tree"
+            target="new"
+			groups="base.group_hr_manager"
+            key2="client_action_multi"/>
+
+	</data>
+</openerp>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+		<record id="payroll_export_form_view" model='ir.ui.view'>
+			<field name="name">payroll.export.form.view</field>
+			<field name="model">payroll.export</field>
+			<field name="arch" type="xml">
+				<form>
+					<label string="Click 'Export' button to export payroll csv" />
+					<div attrs="{'invisible': [('name', '=', False)]}">
+                        <p>Export file: <field name="name" readonly="1" filename="file_name"/></p>
+                    </div>
+					<field name='file_name' invisible="1"/>
+					<footer>
+						<button name='export_csv' type='object' string="Export" />
+						or
+						<button special="cancel" string="Cancel" class='oe_link' />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="payroll_export_action" model="ir.actions.act_window">
+			<field name="name">Payroll Export</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">payroll.export</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		
+		<!--<menuitem name="Payroll Export" parent="itis_hr_extend.menu_hr_reports"-->
+			<!--action="payroll_export_action" id="menu_payroll_export" -->
+			<!--groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>-->
+
+			<act_window id="launch_payroll_export_wizard"
+				name="Lohndaten exportieren"
+				src_model="hr.payslip.run"
+				res_model="payroll.export"
+				view_mode="form,tree"
+				target="new"
+				key2="client_action_multi"/>
+
+	</data>
+</openerp>

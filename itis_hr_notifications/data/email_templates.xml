@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+
+		<record id="email_template_training_end" model="email.template">
+			<field name="name">Training_end Notification</field>
+			<field name="model_id" ref="itis_hr_notifications.model_hr_notifications" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe}</field>
+			<field name="subject">Training End Notification</field>
+			<field name="body_html"><![CDATA[
+			<p>Hello ${object.employee_id and object.employee_id.name or object.user_id and object.user_id.name},</p>
+			<br/>
+			<p>please be informed that the probation period for ${object.for_emp.name} is ending on ${object.date}.
+			</p><br/>
+			<p>Regards</p>
+			<p>Your Human-Resources Team</p>		
+			]]></field>
+		</record>
+
+		<record id="email_template_work_permit_end" model="email.template">
+			<field name="name">work permit Notification</field>
+			<field name="model_id" ref="itis_hr_notifications.model_hr_notifications" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe}</field>
+			<field name="subject">Work Permit End Notification</field>
+			<field name="body_html"><![CDATA[
+			<p>Hello ${object.employee_id and object.employee_id.name or object.user_id and object.user_id.name},</p>
+			<br/>
+			<p>please be informed that the work permit for ${object.for_emp.name} is ending on ${object.date}.</p>
+			<br/>
+			<p>Regards</p>
+			<p>Your Human-Resources Team</p>
+			]]></field>
+		</record>
+		
+		<record id="email_template_temp_empl" model="email.template">
+			<field name="name">Term end Notification</field>
+			<field name="model_id" ref="itis_hr_notifications.model_hr_notifications" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe}</field>
+			<field name="subject">Term End Notification</field>
+			<field name="body_html"><![CDATA[
+			<p>Hello ${object.employee_id and object.employee_id.name or object.user_id and object.user_id.name},</p>
+			<br/>
+			<p>please be informed that the temporary employment for ${object.for_emp.name} is ending on ${object.date}.</p>
+			<br/>
+			<p>Regards</p>
+			<p>Your Human-Resources Team</p>
+			]]></field>
+		</record>
+		
+		<record id="email_template_emp_disable" model="email.template">
+			<field name="name">Disability Notification</field>
+			<field name="model_id" ref="itis_hr_notifications.model_hr_notifications" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe}</field>
+			<field name="subject">Disability Notification</field>
+			<field name="body_html"><![CDATA[
+			<p>Hello ${object.employee_id and object.employee_id.name or object.user_id and object.user_id.name},</p>
+			<br/>
+			<p>please be informed that the severely handicapped pass for ${object.for_emp.name} is ending on ${object.date}.
+			<br/>
+			<p>Regards</p>
+			<p>Your Human-Resources Team</p>		
+			]]></field>
+		</record>
+		
+		<record id="email_template_leave_end" model="email.template">
+			<field name="name">Leave end Notification</field>
+			<field name="model_id" ref="itis_hr_notifications.model_hr_notifications" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe}</field>
+			<field name="subject">Leave Balance Notification</field>
+			<field name="body_html"><![CDATA[
+			<p>Hello ${object.employee_id and object.employee_id.name or object.user_id and object.user_id.name},</p>
+			<br/>
+			<p>please be informed that you have ${object.days} remaining leave.</p>
+			<p>The leave needs to be taken until the end of march.</p> 
+			<p>Remaining leave from the old year will expire on 1st of April.</p>
+			<br>
+			<p>Regards</p>
+			<p>Your Human-Resources Team</p>
+			]]></field>
+		</record>
+		
+		
+		<record id="email_template_overtime" model="email.template">
+			<field name="name">Overtime Notification</field>
+			<field name="model_id" ref="itis_hr_notifications.model_hr_notifications" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${( object.employee_id.work_email or object.user_id != False and object.user_id.email )|safe}</field>
+			<field name="subject">Overtime Notification</field>
+			<field name="body_html"><![CDATA[
+			<p>Hello ${object.employee_id and object.employee_id.name or object.user_id and object.user_id.name},</p>
+			<br/>
+			<p>please be informed that the timesheet for ${object.for_emp.name} is showing ${object.hours}.</p>
+			<br>
+			<p>Regards</p>
+			<p>Your Human-Resources Team</p>
+			]]></field>
+		</record>
+
+	</data>
+
+</openerp>

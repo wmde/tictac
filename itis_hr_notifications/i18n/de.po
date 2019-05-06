@@ -1,0 +1,328 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* itis_hr_notifications
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-11 13:55+0000\n"
+"PO-Revision-Date: 2016-12-11 18:53+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: itis_hr_notifications
+#: model:email.template,body_html:itis_hr_notifications.email_template_temp_empl
+msgid ""
+"\n"
+"\t\t\t<p>Hello ${object.employee_id.name},</p>\n"
+"\t\t\t\n"
+"\t\t\t<p>please be informed that the temporary employment for ${object."
+"employee_id.name} is ending on ${object.date}.</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>Regards</p>\n"
+"\t\t\t<p>Your Human-Resources Team</p>\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"<p>Hallo ${object.employee_id.name},</p>\n"
+"\n"
+"<p>Das befristete Arbeitsverhältnis für ${object.employee_id.name} endet am "
+"${object.date}.</p>\n"
+"<br/>\n"
+"<p>mit freundlichen Grüßen</p>\n"
+"<p>Ihre Personalverwaltung</p>\n"
+"\t\t\t"
+
+#. module: itis_hr_notifications
+#: model:email.template,body_html:itis_hr_notifications.email_template_training_end
+msgid ""
+"\n"
+"\t\t\t<p>Hello ${object.employee_id.name},</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>please be informed that the probation period for ${object."
+"employee_id.name} is ending on ${object.date}.\n"
+"\t\t\t</p><br/>\n"
+"\t\t\t<p>Regards</p>\n"
+"\t\t\t<p>Your Human-Resources Team</p>\t\t\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"<p>Hallo ${object.employee_id.name},</p><br/><p>die Probezeit von ${object."
+"employee_id.name} endet am ${object.date}.</p><br/><p>mit freundlichen "
+"Grüßen</p><p>Ihre Personalverwaltung</p>\n"
+"\t\t\t"
+
+#. module: itis_hr_notifications
+#: model:email.template,body_html:itis_hr_notifications.email_template_emp_disable
+msgid ""
+"\n"
+"\t\t\t<p>Hello ${object.employee_id.name},</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>please be informed that the severely handicapped pass for ${object."
+"employee_id.name} is ending on ${object.date}.\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>Regards</p>\n"
+"\t\t\t<p>Your Human-Resources Team</p>\t\t\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"<p>Hallo ${object.employee_id.name},</p><br/><p>der Schwerbehindertenausweis "
+"für  ${object.employee_id.name} läuft aus am ${object.date}.<br/><p>mit "
+"freundlichen Grüßen</p><p>Ihre Personalverwaltung</p>\n"
+"\t\t\t"
+
+#. module: itis_hr_notifications
+#: model:email.template,body_html:itis_hr_notifications.email_template_overtime
+msgid ""
+"\n"
+"\t\t\t<p>Hello ${object.employee_id.name},</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>please be informed that the timesheet for ${object.employee_id."
+"name} is showing ${object.hours}.</p>\n"
+"\t\t\t<br>\n"
+"\t\t\t<p>Regards</p>\n"
+"\t\t\t<p>Your Human-Resources Team</p>\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"<p>Hallo ${object.employee_id.name},</p><br/><p>das Überstundenkonto von "
+"${object.employee_id.name} beläuft sich auf ${object.hours} Stunden.</"
+"p><br><p>mit freundlichen Grüßen</p><p>Ihre Personalverwaltung</p>\n"
+"\t\t\t"
+
+#. module: itis_hr_notifications
+#: model:email.template,body_html:itis_hr_notifications.email_template_leave_end
+msgid ""
+"\n"
+"\t\t\t<p>Hello ${object.employee_id.name},</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>please be informed that you have ${object.days} remaining leave.</"
+"p>\n"
+"\t\t\t<p>The leave needs to be taken until the end of march.</p> \n"
+"\t\t\t<p>Remaining leave from the old year will expire on 1st of April.</p>\n"
+"\t\t\t<br>\n"
+"\t\t\t<p>Regards</p>\n"
+"\t\t\t<p>Your Human-Resources Team</p>\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"<p>Hallo ${object.employee_id.name},</p><br/><p>Sie haben  ${object.days} "
+"Tage Resturlaub..</p><p>Der Resturlaub muss bis 31. März genommen worden "
+"sein.</p> <p>Verbleibender Resturlaub des Vorjahres, verfällt am 01. April.</"
+"p><br><p>mit freundlichen Grüßen</p><p>Ihre Personalverwaltung</p>\n"
+"\t\t\t"
+
+#. module: itis_hr_notifications
+#: model:email.template,body_html:itis_hr_notifications.email_template_work_permit_end
+msgid ""
+"\n"
+"\t\t\t<p>Hello ${object.employee_id.name},</p>\n"
+"\n"
+"\t\t\t<p>please be informed that the work permit for ${object.employee_id."
+"name} is ending on ${object.date}.</p>\n"
+"\t\t\t<br/>\n"
+"\t\t\t<p>Regards</p>\n"
+"\t\t\t<p>Your Human-Resources Team</p>\n"
+"\t\t\t"
+msgstr ""
+"\n"
+"<p>Hallo ${object.employee_id.name},</p><p>Die Arbeitserlaubnis von ${object."
+"employee_id.name} endet am ${object.date}.</p><br/><p>mit freundlichen "
+"Grüßen</p><p>Ihre Personalverwaltung</p>\n"
+"\t\t\t"
+
+#. module: itis_hr_notifications
+#: model:ir.model,name:itis_hr_notifications.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: itis_hr_notifications
+#: model:ir.model,name:itis_hr_notifications.model_hr_contract
+msgid "Contract"
+msgstr "Arbeitsvertrag"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,days:0
+msgid "Days"
+msgstr "Tage"
+
+#. module: itis_hr_notifications
+#: selection:hr.notifications,type:0
+msgid "Disability"
+msgstr "Behinderung"
+
+#. module: itis_hr_notifications
+#: model:email.template,subject:itis_hr_notifications.email_template_emp_disable
+msgid "Disability Notification"
+msgstr "Erinnerung Behindertenausweis"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,employee_id:0 field:hr.notifications,user_id:0
+#: model:ir.model,name:itis_hr_notifications.model_hr_employee
+msgid "Employee"
+msgstr "Mitarbeiter/-in"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,for_emp:0
+msgid "For Employee"
+msgstr "für mitarbeiter"
+
+#. module: itis_hr_notifications
+#: field:hr.config.settings,remaining_leaves:0
+#: field:res.company,remaining_leaves:0
+msgid "Holiday Season notification before"
+msgstr "Benachrichtigung Resturlaub"
+
+#. module: itis_hr_notifications
+#: help:hr.config.settings,remaining_leaves:0
+#: help:res.company,remaining_leaves:0
+msgid "Holiday season Expiration"
+msgstr "Benachrichtigung Verfall Resturlaub"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,hours:0
+msgid "Hours"
+msgstr "Stunden"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: itis_hr_notifications
+#: selection:hr.notifications,type:0
+msgid "Leave Balance"
+msgstr "Leave Balance"
+
+#. module: itis_hr_notifications
+#: model:email.template,subject:itis_hr_notifications.email_template_leave_end
+msgid "Leave Balance Notification"
+msgstr "Leave Balance Notification"
+
+#. module: itis_hr_notifications
+#: view:hr.config.settings:itis_hr_notifications.itis_view_human_resources_configuration
+msgid "Notifications"
+msgstr "Notifications"
+
+#. module: itis_hr_notifications
+#: selection:hr.notifications,type:0
+msgid "Overtime"
+msgstr "Überstunden"
+
+#. module: itis_hr_notifications
+#: model:email.template,subject:itis_hr_notifications.email_template_overtime
+msgid "Overtime Notification"
+msgstr "Benachrichtigung Überstunden"
+
+#. module: itis_hr_notifications
+#: selection:hr.notifications,type:0
+msgid "Permit End"
+msgstr "Ende Erlaubnis"
+
+#. module: itis_hr_notifications
+#: field:hr.config.settings,savirity:0 field:res.company,savirity:0
+msgid "Savirity notification before"
+msgstr "Erinnerung Behindertenausweis"
+
+#. module: itis_hr_notifications
+#: help:hr.config.settings,savirity:0 help:res.company,savirity:0
+msgid "Severely handicapped persons"
+msgstr "Erinnerung Behindertenausweis"
+
+#. module: itis_hr_notifications
+#: field:hr.config.settings,term_end:0 field:res.company,term_end:0
+msgid "Term  End notification before"
+msgstr "Benachrichtigung Vertragsende"
+
+#. module: itis_hr_notifications
+#: selection:hr.notifications,type:0
+msgid "Term End"
+msgstr "Vertragsende"
+
+#. module: itis_hr_notifications
+#: model:email.template,subject:itis_hr_notifications.email_template_temp_empl
+msgid "Term End Notification"
+msgstr "Benachrichtigung Vertragsende"
+
+#. module: itis_hr_notifications
+#: help:hr.config.settings,term_end:0 help:res.company,term_end:0
+msgid "Term End Notification before months"
+msgstr "Benachrichtigung Vertragsende"
+
+#. module: itis_hr_notifications
+#: selection:hr.notifications,type:0
+msgid "Training End"
+msgstr "Ende Probezeit"
+
+#. module: itis_hr_notifications
+#: model:email.template,subject:itis_hr_notifications.email_template_training_end
+msgid "Training End Notification"
+msgstr "Benachrichtigung Ende der Probezeit"
+
+#. module: itis_hr_notifications
+#: help:hr.config.settings,training_end_day:0
+#: help:res.company,training_end_day:0
+msgid "Training End Notification before months"
+msgstr "Benachrichtigung Ende der Probezeit"
+
+#. module: itis_hr_notifications
+#: field:hr.config.settings,training_end_day:0
+#: field:res.company,training_end_day:0
+msgid "Training End notification before"
+msgstr "Benachrichtigung Ende der Probezeit"
+
+#. module: itis_hr_notifications
+#: field:hr.notifications,type:0
+msgid "Type"
+msgstr "Typ"
+
+#. module: itis_hr_notifications
+#: view:hr.config.settings:itis_hr_notifications.itis_view_human_resources_configuration
+msgid "Weeks"
+msgstr "Wochen"
+
+#. module: itis_hr_notifications
+#: model:email.template,subject:itis_hr_notifications.email_template_work_permit_end
+msgid "Work Permit End Notification"
+msgstr "Benachrichtigung Ende der Arbeitserlaubnis"
+
+#. module: itis_hr_notifications
+#: field:hr.config.settings,work_permit:0 field:res.company,work_permit:0
+msgid "Work Permit notification before End"
+msgstr "Benachrichtigung Ende der Arbeitserlaubnis"
+
+#. module: itis_hr_notifications
+#: help:hr.config.settings,work_permit:0 help:res.company,work_permit:0
+msgid "Work permit Notification before months"
+msgstr "Benachrichtigung Ende der Arbeitserlaubnis"

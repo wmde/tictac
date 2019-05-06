@@ -1,0 +1,2024 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* itis_hr_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20170622\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-21 09:48+0000\n"
+"PO-Revision-Date: 2018-12-21 09:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: itis_hr_extend
+#: model:email.template,body_html:itis_hr_extend.email_template_monthly_employee_data
+msgid "\n"
+"			<p>Sehr geehrte Kollegen,</p>\n"
+"			<br/>\n"
+"			<p>anbei erhalten Sie den aktuellen Report zur Kostenstellenübersicht nach Mitarbeiter.\n"
+"			</p><br/>\n"
+"			<p>Mit freundlichen Grüßen</p>\n"
+"			<p>Ihr HR-Team</p>\n"
+"			\n"
+"			"
+msgstr "\n"
+"			<p>Sehr geehrte Kollegen,</p>\n"
+"			<br/>\n"
+"			<p>anbei erhalten Sie den aktuellen Report zur Kostenstellenübersicht nach Mitarbeiter.\n"
+"			</p><br/>\n"
+"			<p>Mit freundlichen Grüßen</p>\n"
+"			<p>Ihr HR-Team</p>\n"
+"			\n"
+"			"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2016"
+msgstr "2016"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2017"
+msgstr "2017"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2018"
+msgstr "2018"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2019"
+msgstr "2019"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2020"
+msgstr "2020"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2021"
+msgstr "2021"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2022"
+msgstr "2022"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2023"
+msgstr "2023"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2024"
+msgstr "2024"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2025"
+msgstr "2025"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2026"
+msgstr "2026"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2027"
+msgstr "2027"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2028"
+msgstr "2028"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2029"
+msgstr "2029"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2030"
+msgstr "2030"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2031"
+msgstr "2031"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2032"
+msgstr "2032"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2033"
+msgstr "2033"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2034"
+msgstr "2034"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2035"
+msgstr "2035"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2036"
+msgstr "2036"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2037"
+msgstr "2037"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2038"
+msgstr "2038"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,year:0
+msgid "2039"
+msgstr "2039"
+
+#. module: itis_hr_extend
+#: field:hr.employee,five_years:0
+msgid "5-Jahres-Jubiläum"
+msgstr "5-Jahres-Jubiläum"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:871
+#, python-format
+msgid "Abgegoltene Urlaubstage"
+msgstr "Abgegoltene Urlaubstage"
+
+#. module: itis_hr_extend
+#: selection:ld.change,type:0
+msgid "Abziehen"
+msgstr "Abziehen"
+
+#. module: itis_hr_extend
+#: field:leave.time,active:0
+msgid "Active"
+msgstr "Active"
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+msgid "Address"
+msgstr "Adresse"
+
+#. module: itis_hr_extend
+#: field:hr.employee,additional_leave_days_ny:0
+msgid "Addtional Leaves Following Year"
+msgstr "Zusatzurlaub Folgejahr"
+
+#. module: itis_hr_extend
+#: selection:hr.holidays,half_day_type:0
+#: selection:hr.holidays,half_day_type_date_to:0
+msgid "Afternoon"
+msgstr "Nachmittag"
+
+#. module: itis_hr_extend
+#: field:hr.employee,active_employee:0
+msgid "Aktiv"
+msgstr "Aktiv"
+
+#. module: itis_hr_extend
+#: field:hr.department,account_id:0
+msgid "Analytic Account"
+msgstr "Analytic Account"
+
+#. module: itis_hr_extend
+#: field:hr.employee,sum_journal_entries:0
+msgid "Anzahl Journaleinträge"
+msgstr "Anzahl Journaleinträge"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,children:0
+msgid "Anzahl Kinder"
+msgstr "Anzahl Kinder"
+
+#. module: itis_hr_extend
+#: field:hr.employee,approved_leaves_after_march_ny:0
+msgid "Approve Leaves After March"
+msgstr "Genehmigte Urlaubstage ab April"
+
+#. module: itis_hr_extend
+#: field:hr.employee,approved_leaves_ny:0
+msgid "Approve Leaves Following Year"
+msgstr "Genehmigte Urlaubstage Folgejahr"
+
+#. module: itis_hr_extend
+#: field:hr.employee,approved_leaves_till_march_ny:0
+msgid "Approve Leaves Till March"
+msgstr "Genehmigte Urlaubstage bis einschl. März"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,approved_at:0
+msgid "Approved/Refuse At"
+msgstr "Genehmigt/Abgelehnt am "
+
+#. module: itis_hr_extend
+#: field:hr.holidays,approved_by:0
+msgid "Approved/Refuse By"
+msgstr "Genehmigt/Abgelehnt von"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "April"
+msgstr "April"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,address_id:0
+msgid "Arbeitgeber"
+msgstr "Arbeitgeber"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,working_hours:0
+msgid "Arbeitszeit"
+msgstr "Arbeitszeit"
+
+#. module: itis_hr_extend
+#: field:hr.contract,itis_contract_type:0
+#: view:hr.leave.journal:itis_hr_extend.itis_hr_leave_journal_form
+#: field:itis.contract.type,name:0
+msgid "Art"
+msgstr "Art"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "Augast"
+msgstr "August"
+
+#. module: itis_hr_extend
+#: selection:hr.leave.journal,type:0
+msgid "Ausgleich"
+msgstr "Ausgleich"
+
+#. module: itis_hr_extend
+#: field:hr.employee,br_member:0
+msgid "BR Mitglied"
+msgstr "BR Mitglied"
+
+#. module: itis_hr_extend
+#: selection:employee.data.export,report_selection:0
+msgid "BR Übersicht"
+msgstr "BR Übersicht"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,bank_account_id:0
+msgid "Bankverbindung"
+msgstr "Bankverbindung"
+
+#. module: itis_hr_extend
+#: field:hr.payroll.structure,base_on_hours:0
+msgid "Base on Hours"
+msgstr "Stundenbasiert"
+
+#. module: itis_hr_extend
+#: view:hr.payroll.structure:itis_hr_extend.view_hr_employee_grade_form_inherit_itis
+msgid "Basiert auf Stundens"
+msgstr "Stundenbasiert"
+
+#. module: itis_hr_extend
+#: field:hr.employee,disability_limited_until:0
+msgid "Befristet bis"
+msgstr "Befristet bis"
+
+#. module: itis_hr_extend
+#: field:hr.contract,limitation_reason:0
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Befristungsgrund"
+msgstr "Befristungsgrund"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,description:0
+#: field:hr.leave.journal,name:0
+msgid "Begründung"
+msgstr "Begründung"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,notes:0
+msgid "Bemerkung Vertragsinformationen"
+msgstr "Bemerkung Vertragsinformationen"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+#: view:hr.employee:itis_hr_extend.view_employee_form_inherit_itis
+msgid "Bemerkungen"
+msgstr "Bemerkungen"
+
+#. module: itis_hr_extend
+#: model:email.template,subject:itis_hr_extend.email_template_remaining_leave_notification
+msgid "Benachrichtung über deinen Resturlaub/Information about your carried over holiday"
+msgstr "Benachrichtung über deinen Resturlaub/Information about your carried over holiday"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:731
+#: code:addons/itis_hr_extend/models/hr_employee.py:846
+#: code:addons/itis_hr_extend/models/hr_employee.py:859
+#, python-format
+msgid "Berechnung Urlaub zu Jahresbeginn"
+msgstr "Berechnung Urlaub zu Jahresbeginn"
+
+#. module: itis_hr_extend
+#: field:hr.employee,bereich:0
+msgid "Bereich"
+msgstr "Bereich"
+
+#. module: itis_hr_extend
+#: field:itis_confession,name:0
+#: field:itis_limitation_reason,name:0
+msgid "Bezeichnung"
+msgstr "Bezeichnung"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,gross_salary:0
+msgid "Brattogehalt"
+msgstr "Bruttogehalt"
+
+#. module: itis_hr_extend
+#: view:create.emp.payroll:itis_hr_extend.emp_payroll_wiz_form_view
+#: view:create.fte:itis_hr_extend.fte_wiz_form_view
+#: view:employee.data.export:itis_hr_extend.employee_data_export_form_view
+#: view:export.emp.payroll:itis_hr_extend.emp_payroll_export_form_view
+#: view:ld.change:itis_hr_extend.ld_change_form_view
+#: view:ot.change:itis_hr_extend.ot_change_form_view
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: itis_hr_extend
+#: selection:employee.payroll.report,record_change:0
+msgid "Change Contract"
+msgstr "Vertrag geändert"
+
+#. module: itis_hr_extend
+#: selection:employee.payroll.report,record_change:0
+msgid "Change Employee"
+msgstr "Mitarbeiter geändert"
+
+#. module: itis_hr_extend
+#: selection:employee.payroll.report,record_change:0
+msgid "Change Employee Contract"
+msgstr "Mitarbeiter und Vertrag geändert"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,record_change:0
+msgid "Change Record"
+msgstr "Change Record"
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+#: field:itis.hr.contact,city:0
+msgid "City"
+msgstr "Stadt"
+
+#. module: itis_hr_extend
+#: view:export.emp.payroll:itis_hr_extend.emp_payroll_export_form_view
+msgid "Click 'Export' button to export Employee Report csv"
+msgstr "'Export' klicken um eine CSV Datei zu erstellen"
+
+#. module: itis_hr_extend
+#: view:employee.data.export:itis_hr_extend.employee_data_export_form_view
+msgid "Click 'Export' button to export employee data csv"
+msgstr "'Export' klicken um eine CSV Datei zu erstellen"
+
+#. module: itis_hr_extend
+#: view:create.emp.payroll:itis_hr_extend.emp_payroll_wiz_form_view
+msgid "Click 'Generate' button to Generate Employee report"
+msgstr "Auf 'Generieren' klicken um den Bericht zu erzeugen"
+
+#. module: itis_hr_extend
+#: view:create.fte:itis_hr_extend.fte_wiz_form_view
+msgid "Click 'Generate' button to Generate FTE report"
+msgstr "Klicken Sie auf den Button \"Erstellen\" um den FTE-Report zu generieren"
+
+#. module: itis_hr_extend
+#: field:employee.report.data,color:0
+msgid "Color"
+msgstr "Color"
+
+#. module: itis_hr_extend
+#: model:ir.model,name:itis_hr_extend.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Company"
+msgstr "Firma"
+
+#. module: itis_hr_extend
+#: field:hr.employee,compensation_at_vz:0
+msgid "Compensation At VZ"
+msgstr "Compensation At VZ"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.action_itis_hr_contact
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_tree
+msgid "Contacts"
+msgstr "Kontakte"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,contract_id:0
+#: model:ir.model,name:itis_hr_extend.model_hr_contract
+msgid "Contract"
+msgstr "Vertrag"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,contract_id:0
+msgid "Contract id"
+msgstr "ID Vertrag"
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+#: field:itis.hr.contact,country_id:0
+msgid "Country"
+msgstr "Land"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,create_uid:0
+#: field:create.fte,create_uid:0
+#: field:employee.data.export,create_uid:0
+#: field:employee.instruction,create_uid:0
+#: field:employee.meeting,create_uid:0
+#: field:employee.overtime.count,create_uid:0
+#: field:employee.payroll.report,create_uid:0
+#: field:employee.report,create_uid:0
+#: field:employee.report.data,create_uid:0
+#: field:export.emp.payroll,create_uid:0
+#: field:fte.records,create_uid:0
+#: field:fte.report,create_uid:0
+#: field:hr.employee.fte,create_uid:0
+#: field:hr.family.status,create_uid:0
+#: field:hr.health.insurance,create_uid:0
+#: field:hr.leave.journal,create_uid:0
+#: field:hr.leave.nextyear,create_uid:0
+#: field:itis.contract.type,create_uid:0
+#: field:itis.hr.contact,create_uid:0
+#: field:itis.leave.days.calc.error,create_uid:0
+#: field:itis_confession,create_uid:0
+#: field:itis_employee_children,create_uid:0
+#: field:itis_limitation_reason,create_uid:0
+#: field:ld.change,create_uid:0
+#: field:leave.time,create_uid:0
+#: field:ot.change,create_uid:0
+#: field:planned.job,create_uid:0
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,create_date:0
+#: field:create.fte,create_date:0
+#: field:employee.data.export,create_date:0
+#: field:employee.instruction,create_date:0
+#: field:employee.meeting,create_date:0
+#: field:employee.overtime.count,create_date:0
+#: field:employee.payroll.report,create_date:0
+#: field:employee.report,create_date:0
+#: field:employee.report.data,create_date:0
+#: field:export.emp.payroll,create_date:0
+#: field:fte.records,create_date:0
+#: field:fte.report,create_date:0
+#: field:hr.employee.fte,create_date:0
+#: field:hr.family.status,create_date:0
+#: field:hr.health.insurance,create_date:0
+#: field:hr.leave.journal,create_date:0
+#: field:hr.leave.nextyear,create_date:0
+#: field:itis.contract.type,create_date:0
+#: field:itis.hr.contact,create_date:0
+#: field:itis.leave.days.calc.error,create_date:0
+#: field:itis_confession,create_date:0
+#: field:itis_employee_children,create_date:0
+#: field:itis_limitation_reason,create_date:0
+#: field:ld.change,create_date:0
+#: field:leave.time,create_date:0
+#: field:ot.change,create_date:0
+#: field:planned.job,create_date:0
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: itis_hr_extend
+#: field:employee.report,name:0
+#: field:fte.report,name:0
+#: field:hr.leave.nextyear,date:0
+msgid "Date"
+msgstr "Date"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,date_from:0
+msgid "Date From"
+msgstr "Von"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,date_to:0
+msgid "Date To"
+msgstr "Bis"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,leave_sele_dateto_flag:0
+msgid "Date to Flag"
+msgstr "Date to Flag"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "December"
+msgstr "Dezember"
+
+#. module: itis_hr_extend
+#: model:email.template,subject:itis_hr_extend.email_template_toapprove_leave_approve
+msgid "Dein beantragter Urlaubsantrag (aus 2018) wurde genehmigt/Your requested holiday"
+msgstr "Dein beantragter Urlaubsantrag (aus 2018) wurde genehmigt/Your requested holiday"
+
+#. module: itis_hr_extend
+#: model:email.template,subject:itis_hr_extend.email_template_draft_leave_cancel
+msgid "Dein geplanter Urlaubsantrag (aus 2018) im Status Entwurf/Your planned holiday"
+msgstr "Dein geplanter Urlaubsantrag (aus 2018) im Status Entwurf/Your planned holiday"
+
+#. module: itis_hr_extend
+#: field:fte.records,department_id:0
+#: field:hr.employee.fte,department_id:0
+msgid "Department"
+msgstr "Abteilung"
+
+#. module: itis_hr_extend
+#: field:fte.records,diff_fte:0
+msgid "Difference FTE"
+msgstr "Abweichung FTE"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,display_name:0
+#: field:create.fte,display_name:0
+#: field:employee.data.export,display_name:0
+#: field:employee.instruction,display_name:0
+#: field:employee.meeting,display_name:0
+#: field:employee.overtime.count,display_name:0
+#: field:employee.payroll.report,display_name:0
+#: field:employee.report,display_name:0
+#: field:employee.report.data,display_name:0
+#: field:export.emp.payroll,display_name:0
+#: field:fte.records,display_name:0
+#: field:fte.report,display_name:0
+#: field:hr.employee.fte,display_name:0
+#: field:hr.family.status,display_name:0
+#: field:hr.health.insurance,display_name:0
+#: field:hr.leave.journal,display_name:0
+#: field:hr.leave.nextyear,display_name:0
+#: field:itis.contract.type,display_name:0
+#: field:itis.hr.contact,display_name:0
+#: field:itis.leave.days.calc.error,display_name:0
+#: field:itis_confession,display_name:0
+#: field:itis_employee_children,display_name:0
+#: field:itis_limitation_reason,display_name:0
+#: field:ld.change,display_name:0
+#: field:leave.time,display_name:0
+#: field:ot.change,display_name:0
+#: field:planned.job,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,email:0
+msgid "Email"
+msgstr "Email"
+
+#. module: itis_hr_extend
+#: field:employee.instruction,employee_id:0
+#: field:employee.meeting,employee_id:0
+#: field:employee.overtime.count,employee_id:0
+#: field:employee.payroll.report,employee_id:0
+#: field:employee.report.data,employee_id:0
+#: field:hr.employee.fte,emp_id:0
+#: model:ir.model,name:itis_hr_extend.model_hr_employee
+msgid "Employee"
+msgstr "Mitarbeiter/-in"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.act_hr_employee_instruction
+msgid "Employee Instruction"
+msgstr "Unterweisung"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.act_hr_employee_meeting
+msgid "Employee Meeting"
+msgstr "Mitarbeitergespräch"
+
+#. module: itis_hr_extend
+#: view:employee.overtime.count:itis_hr_extend.emp_overtime_count_form
+#: view:employee.overtime.count:itis_hr_extend.emp_overtime_count_tree
+#: model:ir.actions.act_window,name:itis_hr_extend.emp_overtime_count_action
+#: model:ir.ui.menu,name:itis_hr_extend.menu_emp_overtime_count
+msgid "Employee Overtime Count"
+msgstr "Überstunden/Mitarbeiter"
+
+#. module: itis_hr_extend
+#: view:employee.payroll.report:itis_hr_extend.itis_emp_payroll_report_tree
+msgid "Employee Payroll Records"
+msgstr "Mitarbeiter Lohnübersicht Einträge"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.emp_payroll_window_action
+msgid "Employee Payroll Report"
+msgstr "Bericht Mitarbeiter Lohnübersicht "
+
+#. module: itis_hr_extend
+#: field:employee.report.data,employee_report_id:0
+#: model:ir.actions.act_window,name:itis_hr_extend.employee_report_action
+#: model:ir.ui.menu,name:itis_hr_extend.menu_employee_report
+msgid "Employee Report"
+msgstr "Überstunden / Urlaub"
+
+#. module: itis_hr_extend
+#: field:export.emp.payroll,name:0
+msgid "Employee Report CSV"
+msgstr "Mitarbeiter Bericht CSV"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.emp_payroll_export_action
+#: model:ir.actions.act_window,name:itis_hr_extend.launch_emp_payroll_export_wizard
+msgid "Employee Report Export"
+msgstr "Export Bericht Mitarbeiter"
+
+#. module: itis_hr_extend
+#: help:employee.payroll.report,bank_account_id:0
+msgid "Employee bank salary account"
+msgstr "Employee bank salary account"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,employee_id:0
+#: field:hr.leave.nextyear,employee_id:0
+msgid "Employee id"
+msgstr "ID Mitarbeiter"
+
+#. module: itis_hr_extend
+#: view:employee.report:itis_hr_extend.itis_employee_report_tree
+#: field:employee.report,employee_ids:0
+msgid "Employees"
+msgstr "Mitarbeiter"
+
+#. module: itis_hr_extend
+#: field:leave.time,fullday_end_time:0
+#: field:leave.time,halfday_afternoon_end_time:0
+#: field:leave.time,halfday_morning_end_time:0
+msgid "End Time"
+msgstr "End Time"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+#: field:hr.employee,temp_contract_end_date:0
+msgid "Enddatum befristeter Vertrag"
+msgstr "Enddatum befristeter Vertrag"
+
+#. module: itis_hr_extend
+#: field:hr.employee,initial_date:0
+msgid "Ersteintrittsdatum"
+msgstr "Ersteintrittsdatum"
+
+#. module: itis_hr_extend
+#: field:hr.employee,executive_employee:0
+msgid "Executive Employee"
+msgstr "Leitender Angesteller"
+
+#. module: itis_hr_extend
+#: view:employee.data.export:itis_hr_extend.employee_data_export_form_view
+#: view:export.emp.payroll:itis_hr_extend.emp_payroll_export_form_view
+msgid "Export"
+msgstr "Export"
+
+#. module: itis_hr_extend
+#: view:employee.data.export:itis_hr_extend.employee_data_export_form_view
+#: view:export.emp.payroll:itis_hr_extend.emp_payroll_export_form_view
+msgid "Export file:"
+msgstr "Export Datei:"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/wizard/emp_data_wizard.py:56
+#, python-format
+msgid "Exported Employee Data"
+msgstr "Exportierte Mitarbeiterdaten"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/wizard/emp_payroll_wizard.py:320
+#, python-format
+msgid "Exported Employee Report"
+msgstr "exportierter Mitarbeiter Bericht"
+
+#. module: itis_hr_extend
+#: field:fte.records,fte:0
+#: field:hr.employee,fte:0
+#: field:hr.employee.fte,fte:0
+msgid "FTE"
+msgstr "FTE"
+
+#. module: itis_hr_extend
+#: view:fte.records:itis_hr_extend.itis_fte_records_form
+#: view:fte.report:itis_hr_extend.itis_fte_report_form
+#: field:fte.report,fte_ids:0
+msgid "FTE Records"
+msgstr "FTE Einträge"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/wizard/fte_wizard.py:108
+#: field:fte.records,fte_id:0
+#: view:fte.report:itis_hr_extend.itis_fte_report_tree
+#: model:ir.actions.act_window,name:itis_hr_extend.fte_report_action
+#: model:ir.actions.act_window,name:itis_hr_extend.fte_window_action
+#, python-format
+msgid "FTE Report"
+msgstr "FTE Report"
+
+#. module: itis_hr_extend
+#: model:ir.ui.menu,name:itis_hr_extend.menu_fte_report
+msgid "FTE Reports"
+msgstr "FTE Reports"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "FTE(%)"
+msgstr "FTE(%)"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+#: field:hr.employee,fte_ids:0
+msgid "FTEs"
+msgstr "FTEs"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,family_status:0
+#: field:hr.employee,family_status:0
+msgid "Familienstand"
+msgstr "Familienstand"
+
+#. module: itis_hr_extend
+#: view:hr.family.status:itis_hr_extend.itis_family_status_form
+#: view:hr.family.status:itis_hr_extend.itis_family_status_tree
+#: model:ir.actions.act_window,name:itis_hr_extend.hr_family_status_action
+#: model:ir.ui.menu,name:itis_hr_extend.menu_family_status
+#: view:itis.leave.days.calc.error:itis_hr_extend.itis_leave_days_calc_error_tree
+msgid "Family Status"
+msgstr "Familienstand"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,fax:0
+msgid "Fax"
+msgstr "Fax"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "February"
+msgstr "Februar"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.leave_days_calc_error_action
+#: model:ir.ui.menu,name:itis_hr_extend.menu_days_calc_error
+msgid "Fehler Urlaubsberechnung"
+msgstr "Fehler Urlaubsberechnung"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:990
+#, python-format
+msgid "Fehler automatische Kalkulation durch keine durchgängigen Arbeitsverträge"
+msgstr "Fehler automatische Kalkulation durch keine durchgängigen Arbeitsverträge"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:993
+#, python-format
+msgid "Fehler automatische Kalkulation durch Änderung Urlaubsanspruch"
+msgstr "Fehler automatische Kalkulation durch Änderung Urlaubsanspruch"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:996
+#, python-format
+msgid "Fehler automatische Kalkulation durch Änderung Wochenarbeitstage"
+msgstr "Fehler automatische Kalkulation durch Änderung Wochenarbeitstage"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:720
+#, python-format
+msgid "Fehler in Berechnung"
+msgstr "Fehler in Berechnung"
+
+#. module: itis_hr_extend
+#: field:itis.leave.days.calc.error,error:0
+msgid "Fehlermeldung"
+msgstr "Fehlermeldung"
+
+#. module: itis_hr_extend
+#: field:employee.data.export,file_name:0
+#: field:export.emp.payroll,file_name:0
+msgid "File"
+msgstr "Datei"
+
+#. module: itis_hr_extend
+#: selection:hr.holidays,leave_selection:0
+#: selection:hr.holidays,leave_selection_date_to:0
+msgid "Full Day"
+msgstr "Ganztags"
+
+#. module: itis_hr_extend
+#: view:leave.time:itis_hr_extend.itis_leave_timing_tree
+msgid "Full Day Period"
+msgstr "Zeitraum Ganztag"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,birthday:0
+#: field:itis_employee_children,birth_date:0
+msgid "Geburtsdatum"
+msgstr "Geburtsdatum"
+
+#. module: itis_hr_extend
+#: field:hr.employee,birth_name:0
+msgid "Geburtsname"
+msgstr "Geburtsname"
+
+#. module: itis_hr_extend
+#: view:create.emp.payroll:itis_hr_extend.emp_payroll_wiz_form_view
+#: view:create.fte:itis_hr_extend.fte_wiz_form_view
+msgid "Generate"
+msgstr "Erstellen"
+
+#. module: itis_hr_extend
+#: model:ir.ui.menu,name:itis_hr_extend.menu_emp_payroll_report_generate
+msgid "Generate Employee Payroll Report"
+msgstr "Bericht Lohnübersicht erstellen"
+
+#. module: itis_hr_extend
+#: model:ir.ui.menu,name:itis_hr_extend.menu_fte_report_generate
+msgid "Generate FTE Report"
+msgstr "FTE-Report erstellen"
+
+#. module: itis_hr_extend
+#: field:employee.report.data,sum_leaves:0
+#: field:hr.employee,sum_leaves:0
+#: field:hr.holidays,sum_leaves:0
+msgid "Gesamtanspruch"
+msgstr "noch verbleibender Urlaub"
+
+#. module: itis_hr_extend
+#: view:hr.leave.journal:itis_hr_extend.itis_hr_leave_journal_form
+msgid "Group By"
+msgstr "Group By"
+
+#. module: itis_hr_extend
+#: model:ir.ui.menu,name:itis_hr_extend.itis_hr_contact_menu
+msgid "HR Contacts"
+msgstr "HR Kontakte"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+#: view:hr.employee:itis_hr_extend.view_employee_form_inherit_itis
+msgid "HR Settings"
+msgstr "Einstellungen"
+
+#. module: itis_hr_extend
+#: selection:hr.holidays,leave_selection:0
+#: selection:hr.holidays,leave_selection_date_to:0
+msgid "Half Day"
+msgstr "Halber Tag"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,half_day_type:0
+#: field:hr.holidays,half_day_type_date_to:0
+msgid "Half Day Type"
+msgstr "Halbtägiger Typ"
+
+#. module: itis_hr_extend
+#: view:leave.time:itis_hr_extend.itis_leave_timing_tree
+msgid "Halfday Afternoon Period"
+msgstr "Zeitraum Halbtags Nachmittag"
+
+#. module: itis_hr_extend
+#: view:leave.time:itis_hr_extend.itis_leave_timing_tree
+msgid "Halfday Morning Period"
+msgstr "Zeitraum Halbtags Vormittag"
+
+#. module: itis_hr_extend
+#: view:hr.health.insurance:itis_hr_extend.itis_health_insurance_form
+#: view:hr.health.insurance:itis_hr_extend.itis_health_insurance_tree
+#: model:ir.actions.act_window,name:itis_hr_extend.hr_health_action
+#: model:ir.ui.menu,name:itis_hr_extend.menu_health_insurance
+msgid "Health Insurance"
+msgstr "Krankenversicherung"
+
+#. module: itis_hr_extend
+#: selection:ld.change,type:0
+msgid "Hinzufügen"
+msgstr "Hinzufügen"
+
+#. module: itis_hr_extend
+#: field:hr.leave.nextyear,holiday_id:0
+msgid "Holiday"
+msgstr "Holiday"
+
+#. module: itis_hr_extend
+#: field:resource.calendar,hourly_basis:0
+msgid "Hourly Basis"
+msgstr "Hourly Basis"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,id:0
+#: field:create.fte,id:0
+#: field:employee.data.export,id:0
+#: field:employee.instruction,id:0
+#: field:employee.meeting,id:0
+#: field:employee.overtime.count,id:0
+#: field:employee.payroll.report,id:0
+#: field:employee.report,id:0
+#: field:employee.report.data,id:0
+#: field:export.emp.payroll,id:0
+#: field:fte.records,id:0
+#: field:fte.report,id:0
+#: field:hr.employee.fte,id:0
+#: field:hr.family.status,id:0
+#: field:hr.health.insurance,id:0
+#: field:hr.leave.journal,id:0
+#: field:hr.leave.nextyear,id:0
+#: field:itis.contract.type,id:0
+#: field:itis.hr.contact,id:0
+#: field:itis.leave.days.calc.error,id:0
+#: field:itis_confession,id:0
+#: field:itis_employee_children,id:0
+#: field:itis_limitation_reason,id:0
+#: field:ld.change,id:0
+#: field:leave.time,id:0
+#: field:ot.change,id:0
+#: field:planned.job,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,is_ot_leave:0
+msgid "Is OT Leave"
+msgstr "Ist OT Urlaub"
+
+#. module: itis_hr_extend
+#: field:hr.holidays.status,is_sick_leave_type:0
+msgid "Is Sick Leave Type"
+msgstr "Is Sick Leave Type"
+
+#. module: itis_hr_extend
+#: field:hr.holidays.status,is_holiday:0
+msgid "Is holiday Type"
+msgstr "Feiertag"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,br_member:0
+#: selection:hr.employee,disability:0
+msgid "Ja"
+msgstr "Ja"
+
+#. module: itis_hr_extend
+#: view:hr.leave.journal:itis_hr_extend.itis_hr_leave_journal_form
+#: field:hr.leave.journal,year:0
+#: field:itis.leave.days.calc.error,year:0
+msgid "Jahr"
+msgstr "Jahr"
+
+#. module: itis_hr_extend
+#: view:hr.leave.journal:itis_hr_extend.itis_hr_leave_journal_form
+msgid "Jahr Art"
+msgstr "Jahr Art"
+
+#. module: itis_hr_extend
+#: view:res.company:itis_hr_extend.company_view_form_itis
+msgid "Jahreswechsel Testen"
+msgstr "Jahreswechsel Testen"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "January"
+msgstr "Januar"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "July"
+msgstr "Juli"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "June"
+msgstr "Juni"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:705
+#, python-format
+msgid "Kein Vertrag am 01.Januar vorhanden"
+msgstr "Kein Vertrag am 01.Januar vorhanden"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+#: field:hr.employee,children_ids:0
+msgid "Kinder"
+msgstr "Kinder"
+
+#. module: itis_hr_extend
+#: field:hr.employee,confession:0
+msgid "Konfession"
+msgstr "Konfession"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,health_insurance:0
+#: field:hr.employee,health_insurance:0
+msgid "Krankenkasse"
+msgstr "Krankenkasse"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,sick_days:0
+msgid "Krankheitstage"
+msgstr "Krankheitstage"
+
+#. module: itis_hr_extend
+#: field:hr.employee,last_contract_changed_date:0
+msgid "Last Contract Change Date"
+msgstr "Letztes Vertragsänderungsdatum"
+
+#. module: itis_hr_extend
+#: field:hr.employee,last_contract_changed_wage:0
+msgid "Last Contract Changed Wage"
+msgstr "Letztes Gehaltsänderungsdatum"
+
+#. module: itis_hr_extend
+#: field:hr.employee,last_ma_conversation_date:0
+msgid "Last Meeting"
+msgstr "Letztes Meeting"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,__last_update:0
+#: field:create.fte,__last_update:0
+#: field:employee.data.export,__last_update:0
+#: field:employee.instruction,__last_update:0
+#: field:employee.meeting,__last_update:0
+#: field:employee.overtime.count,__last_update:0
+#: field:employee.payroll.report,__last_update:0
+#: field:employee.report,__last_update:0
+#: field:employee.report.data,__last_update:0
+#: field:export.emp.payroll,__last_update:0
+#: field:fte.records,__last_update:0
+#: field:fte.report,__last_update:0
+#: field:hr.employee.fte,__last_update:0
+#: field:hr.family.status,__last_update:0
+#: field:hr.health.insurance,__last_update:0
+#: field:hr.leave.journal,__last_update:0
+#: field:hr.leave.nextyear,__last_update:0
+#: field:itis.contract.type,__last_update:0
+#: field:itis.hr.contact,__last_update:0
+#: field:itis.leave.days.calc.error,__last_update:0
+#: field:itis_confession,__last_update:0
+#: field:itis_employee_children,__last_update:0
+#: field:itis_limitation_reason,__last_update:0
+#: field:ld.change,__last_update:0
+#: field:leave.time,__last_update:0
+#: field:ot.change,__last_update:0
+#: field:planned.job,__last_update:0
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,write_uid:0
+#: field:create.fte,write_uid:0
+#: field:employee.data.export,write_uid:0
+#: field:employee.instruction,write_uid:0
+#: field:employee.meeting,write_uid:0
+#: field:employee.overtime.count,write_uid:0
+#: field:employee.payroll.report,write_uid:0
+#: field:employee.report,write_uid:0
+#: field:employee.report.data,write_uid:0
+#: field:export.emp.payroll,write_uid:0
+#: field:fte.records,write_uid:0
+#: field:fte.report,write_uid:0
+#: field:hr.employee.fte,write_uid:0
+#: field:hr.family.status,write_uid:0
+#: field:hr.health.insurance,write_uid:0
+#: field:hr.leave.journal,write_uid:0
+#: field:hr.leave.nextyear,write_uid:0
+#: field:itis.contract.type,write_uid:0
+#: field:itis.hr.contact,write_uid:0
+#: field:itis.leave.days.calc.error,write_uid:0
+#: field:itis_confession,write_uid:0
+#: field:itis_employee_children,write_uid:0
+#: field:itis_limitation_reason,write_uid:0
+#: field:ld.change,write_uid:0
+#: field:leave.time,write_uid:0
+#: field:ot.change,write_uid:0
+#: field:planned.job,write_uid:0
+msgid "Last Updated by"
+msgstr "Aktualisiert von"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,write_date:0
+#: field:create.fte,write_date:0
+#: field:employee.data.export,write_date:0
+#: field:employee.instruction,write_date:0
+#: field:employee.meeting,write_date:0
+#: field:employee.overtime.count,write_date:0
+#: field:employee.payroll.report,write_date:0
+#: field:employee.report,write_date:0
+#: field:employee.report.data,write_date:0
+#: field:export.emp.payroll,write_date:0
+#: field:fte.records,write_date:0
+#: field:fte.report,write_date:0
+#: field:hr.employee.fte,write_date:0
+#: field:hr.family.status,write_date:0
+#: field:hr.health.insurance,write_date:0
+#: field:hr.leave.journal,write_date:0
+#: field:hr.leave.nextyear,write_date:0
+#: field:itis.contract.type,write_date:0
+#: field:itis.hr.contact,write_date:0
+#: field:itis.leave.days.calc.error,write_date:0
+#: field:itis_confession,write_date:0
+#: field:itis_employee_children,write_date:0
+#: field:itis_limitation_reason,write_date:0
+#: field:ld.change,write_date:0
+#: field:leave.time,write_date:0
+#: field:ot.change,write_date:0
+#: field:planned.job,write_date:0
+msgid "Last Updated on"
+msgstr "Aktualisiert am"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,last_year_carry_fwd:0
+msgid "Last Year Carry Fwd Info"
+msgstr "Last Year Carry Fwd Info"
+
+#. module: itis_hr_extend
+#: model:ir.model,name:itis_hr_extend.model_hr_holidays
+msgid "Leave"
+msgstr "Urlaub"
+
+#. module: itis_hr_extend
+#: field:ld.change,leave_day:0
+#: field:ot.change,leave_day:0
+msgid "Leave Day"
+msgstr "Abwesenheitstag"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,leave_hours:0
+msgid "Leave Hours"
+msgstr "Leave Hours"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_holiday.py:326
+#: code:addons/itis_hr_extend/models/hr_holiday.py:329
+#, python-format
+msgid "Leave Request"
+msgstr "Urlaubsantrag"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,leave_selection:0
+#: field:hr.holidays,leave_selection_date_to:0
+msgid "Leave Selection"
+msgstr "Verlassen Auswahl"
+
+#. module: itis_hr_extend
+#: view:leave.time:itis_hr_extend.itis_leave_timing_tree
+msgid "Leave Time"
+msgstr "Urlaubsdauer"
+
+#. module: itis_hr_extend
+#: view:hr.leave.journal:itis_hr_extend.itis_hr_leave_journal_form
+#: model:ir.model,name:itis_hr_extend.model_hr_holidays_status
+msgid "Leave Type"
+msgstr "Abwesenheitstyp"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,leave_id:0
+msgid "Leave id"
+msgstr "ID Abwesenheiut"
+
+#. module: itis_hr_extend
+#: field:hr.employee,leave_journal_ids:0
+msgid "Leave journal ids"
+msgstr "IDs Abwesenheitsjournal"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,leave_type:0
+msgid "Leave type"
+msgstr "Abwesenheit Typ"
+
+#. module: itis_hr_extend
+#: field:hr.employee,contract_leaves:0
+#: model:ir.actions.act_window,name:itis_hr_extend.act_hr_leaves_overview
+msgid "Leaves"
+msgstr "Urlaubstage"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+#: field:hr.employee,leave_days_ny:0
+msgid "Leaves Following Year"
+msgstr "Urlaub Folgejahr"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Letztes MA Gespraech"
+msgstr "Letztes MA Gespraech"
+
+#. module: itis_hr_extend
+#: model:email.template,body_html:itis_hr_extend.email_template_draft_leave_cancel
+msgid "Liebe/r ${object.employee_id.surname},<br><br>wir informieren dich darüber, dass dein geplanter Urlaubsantrag für den ${ctx['date_from']} bis zum ${ctx['date_to']} automatisch aufgrund des Jahreswechsels vom Status “Zu Bestätigen” (Entwurf) in den Status “Abgebrochen” geändert wurde.<br><br>Solltest du weitere Fragen haben, wende dich an das Team Personal.<br>Viele Grüße<br>Dein TicTac Team<br><br>----------------<br><br>Dear ${object.employee_id.surname},<br><br>we kindly inform you that your planned holiday from ${ctx['date_from']} until ${ctx['date_to']} was automatically changed from Status ”To Submit” (Draft) into Status “Refused” due to year change.<br><br>For any questions please contact Team Personal.<br>Best Regards<br>Your TicTac Team"
+msgstr "Liebe/r ${object.employee_id.surname},<br><br>wir informieren dich darüber, dass dein geplanter Urlaubsantrag für den ${ctx['date_from']} bis zum ${ctx['date_to']} automatisch aufgrund des Jahreswechsels vom Status “Zu Bestätigen” (Entwurf) in den Status “Abgebrochen” geändert wurde.<br><br>Solltest du weitere Fragen haben, wende dich an das Team Personal.<br>Viele Grüße<br>Dein TicTac Team<br><br>----------------<br><br>Dear ${object.employee_id.surname},<br><br>we kindly inform you that your planned holiday from ${ctx['date_from']} until ${ctx['date_to']} was automatically changed from Status ”To Submit” (Draft) into Status “Refused” due to year change.<br><br>For any questions please contact Team Personal.<br>Best Regards<br>Your TicTac Team"
+
+#. module: itis_hr_extend
+#: model:email.template,body_html:itis_hr_extend.email_template_toapprove_leave_approve
+msgid "Liebe/r ${object.employee_id.surname},<br><br>wir informieren dich darüber, dass dein offener Urlaubsantrag für den ${ctx['date_from']} bis zum ${ctx['date_to']} automatisch aufgrund des Jahreswechsels vom Status “Zu genehmigen” in den Status “Genehmigt” geändert wurde und der Urlaub damit freigegeben ist. <br><br>Viele Grüße<br>Dein TicTac Team<br>---------<br><br>Dear ${object.employee_id.surname},<br><br>we kindly inform you that your pending holiday request from ${ctx['date_from']} until ${ctx['date_to']} was automatically changed from “To Approve” in Status “Approved” due to year change. <br><br>For any questions please contact Team Personal.<br>Best Regards<br>Your TicTac Team<br><br>"
+msgstr "Liebe/r ${object.employee_id.surname},<br><br>wir informieren dich darüber, dass dein offener Urlaubsantrag für den ${ctx['date_from']} bis zum ${ctx['date_to']} automatisch aufgrund des Jahreswechsels vom Status “Zu genehmigen” in den Status “Genehmigt” geändert wurde und der Urlaub damit freigegeben ist. <br><br>Viele Grüße<br>Dein TicTac Team<br>---------<br><br>Dear ${object.employee_id.surname},<br><br>we kindly inform you that your pending holiday request from ${ctx['date_from']} until ${ctx['date_to']} was automatically changed from “To Approve” in Status “Approved” due to year change. <br><br>For any questions please contact Team Personal.<br>Best Regards<br>Your TicTac Team<br><br>"
+
+#. module: itis_hr_extend
+#: model:email.template,body_html:itis_hr_extend.email_template_remaining_leave_notification
+msgid "Liebe/r ${object.surname},<br><br>du hast ${ctx['remaining_leaves']} Tage Resturlaub aus dem Vorjahr ins neue Jahr übertragen.<br>Der Resturlaub muss bis 31. März genommen worden sein, ansonsten verfällt dieser zum 01. April.<br><br>Solltest du weitere Fragen haben, wende dich an das Team Personal.<br>Viele Grüße<br>Dein TicTac Team<br><br>-------------------<br>Dear ${object.surname},<br><br>we kindly inform you have transferred ${ctx['remaining_leaves']} days rest leave from the previous year into the new year.<br>These carried over days must have been taken until March 31st, otherwise it expires on the 1st of April.<br><br>For any questions please contact Team Personal.<br>Best Regards<br>Your TicTac Team"
+msgstr "Liebe/r ${object.surname},<br><br>du hast ${ctx['remaining_leaves']} Tage Resturlaub aus dem Vorjahr ins neue Jahr übertragen.<br>Der Resturlaub muss bis 31. März genommen worden sein, ansonsten verfällt dieser zum 01. April.<br><br>Solltest du weitere Fragen haben, wende dich an das Team Personal.<br>Viele Grüße<br>Dein TicTac Team<br><br>-------------------<br>Dear ${object.surname},<br><br>we kindly inform you have transferred ${ctx['remaining_leaves']} days rest leave from the previous year into the new year.<br>These carried over days must have been taken until March 31st, otherwise it expires on the 1st of April.<br><br>For any questions please contact Team Personal.<br>Best Regards<br>Your TicTac Team"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,ljournal_ids:0
+msgid "Ljournal ids"
+msgstr "IDs Abwesenheitsjournal"
+
+#. module: itis_hr_extend
+#: selection:hr.leave.journal,type:0
+msgid "Manuell"
+msgstr "Manuell"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "March"
+msgstr "March"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "May"
+msgstr "Mai"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Meeting"
+msgstr "Personalgespräche"
+
+#. module: itis_hr_extend
+#: field:employee.instruction,meeting_date:0
+#: field:employee.meeting,meeting_date:0
+msgid "Meeting Date"
+msgstr "Datum Gespräch"
+
+#. module: itis_hr_extend
+#: field:employee.instruction,note:0
+#: field:employee.meeting,note:0
+msgid "Meeting Notes"
+msgstr "Gesprächsnotizen"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.view_employee_form_inherit_itis
+msgid "Meetings"
+msgstr "Personalgespräche"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:694
+#: code:addons/itis_hr_extend/models/hr_employee.py:703
+#, python-format
+msgid "Mehr als ein Vertrag zum 01.Januar"
+msgstr "Mehr als ein Vertrag zum 01.Januar"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.view_employee_form_inherit_itis
+msgid "Memo"
+msgstr "Unterweisungen"
+
+#. module: itis_hr_extend
+#: model:ir.model,name:itis_hr_extend.model_mail_message
+msgid "Message"
+msgstr "Nachricht"
+
+#. module: itis_hr_extend
+#: field:itis.leave.days.calc.error,name:0
+#: field:itis_employee_children,parent_id:0
+msgid "Mitarbeiter"
+msgstr "Mitarbeiter"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Mitarbeiter/in"
+msgstr "Mitarbeiter/in"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Mitarbeiterdaten"
+msgstr "Mitarbeiterdaten"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,mobile:0
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,month:0
+msgid "Month"
+msgstr "Monat"
+
+#. module: itis_hr_extend
+#: model:email.template,subject:itis_hr_extend.email_template_monthly_employee_data
+msgid "Monthly Employee Data Report"
+msgstr "Monatlicher Mitarbeiter Report"
+
+#. module: itis_hr_extend
+#: selection:hr.holidays,half_day_type:0
+#: selection:hr.holidays,half_day_type_date_to:0
+msgid "Morning"
+msgstr "Morgen"
+
+#. module: itis_hr_extend
+#: field:hr.employee,second_name:0
+msgid "Nachname"
+msgstr "Nachname"
+
+#. module: itis_hr_extend
+#: field:employee.instruction,name:0
+#: field:employee.meeting,name:0
+#: field:employee.payroll.report,name:0
+#: field:hr.health.insurance,name:0
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_tree
+#: field:itis.hr.contact,name:0
+#: field:itis_employee_children,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: itis_hr_extend
+#: field:hr.employee,employee_instruction_id:0
+msgid "Next Instruction Meeting"
+msgstr "Letzte Einweisung"
+
+#. module: itis_hr_extend
+#: field:hr.employee,employee_meeting_id:0
+msgid "Next Meeting"
+msgstr "Letztes Personalgespräch"
+
+#. module: itis_hr_extend
+#: field:res.company,next_year_date:0
+msgid "Next Year Date"
+msgstr "Datum"
+
+#. module: itis_hr_extend
+#: field:hr.holidays,number_of_days_temp_ny:0
+msgid "Next Year Days"
+msgstr "Urlaubstage Folgejahr"
+
+#. module: itis_hr_extend
+#: field:employee.report.data,sum_leaves_ny:0
+#: field:hr.holidays,sum_leaves_ny:0
+msgid "Next Year Remaining Leaves"
+msgstr "verbleibender Urlaub Folgejahr"
+
+#. module: itis_hr_extend
+#: field:hr.employee,nextyear_leave_ids:0
+msgid "Nextyear leave ids"
+msgstr "Nextyear leave ids"
+
+#. module: itis_hr_extend
+#: selection:employee.payroll.report,record_change:0
+msgid "No Change"
+msgstr "No Change"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/employee_report.py:42
+#, python-format
+msgid "No associated employee found with user"
+msgstr "kein mit dem Benutzer verknüpfter Mitarbeiter gefunden"
+
+#. module: itis_hr_extend
+#: field:hr.employee,contract_notes:0
+msgid "Notes"
+msgstr "Notes"
+
+#. module: itis_hr_extend
+#: field:hr.employee,emergency_contact:0
+msgid "Notfallkontakt"
+msgstr "Notfallkontakt1"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "November"
+msgstr "November"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "October"
+msgstr "October"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.hr_office_time_action
+msgid "Office Leave Timing"
+msgstr "Büro Anwesenheitszeit"
+
+#. module: itis_hr_extend
+#: model:ir.ui.menu,name:itis_hr_extend.menu_office_time
+msgid "Office Time"
+msgstr "Büro Anwesenheitszeiten"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_holiday.py:294
+#: code:addons/itis_hr_extend/models/hr_holiday.py:375
+#, python-format
+msgid "Only the Manager of this employee can approve this leave request."
+msgstr "Nur der Manager des Mitarbeiters, kann den Urlaubsantrag genehmigen."
+
+#. module: itis_hr_extend
+#: field:employee.overtime.count,emp_overtime_count:0
+#: field:employee.report.data,overtime_count:0
+#: field:hr.employee,computed_overtime_count:0
+#: field:hr.employee,overtime_count:0
+#: field:hr.holidays,ot_hours:0
+#: field:ot.change,ot_time:0
+msgid "Overtime Count"
+msgstr "Überstunden-Konto"
+
+#. module: itis_hr_extend
+#: field:hr.employee,employee_overtime_id:0
+msgid "Overtime Count New"
+msgstr "Überstunden-Konto"
+
+#. module: itis_hr_extend
+#: model:hr.holidays.status,name:itis_hr_extend.itis_leave_overtime
+msgid "Overtime Leave"
+msgstr "Überstunden"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:608
+#: code:addons/itis_hr_extend/models/hr_employee.py:640
+#, python-format
+msgid "Overtime has been chagned from <b>%s</b> to <b>%s</b>.<br/>Reason : %s"
+msgstr "Überstundenkonto wurde von <b>%s</b> zu <b>%s</b>.<br/>Begründung : %s"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,identification_id:0
+msgid "Personal-Nr"
+msgstr "Personal-Nr"
+
+#. module: itis_hr_extend
+#: selection:employee.data.export,report_selection:0
+#: model:ir.actions.server,name:itis_hr_extend.action_sever_itis_emp_data
+#: model:ir.ui.menu,name:itis_hr_extend.itis_emp_data_menu_server
+msgid "Personalübersicht"
+msgstr "Personalübersicht"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.employee_data_export_action
+#: model:ir.actions.act_window,name:itis_hr_extend.launch_employee_data_export_wizard
+msgid "Personalübersicht Export"
+msgstr "Personalübersicht Export"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,phone:0
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: itis_hr_extend
+#: field:fte.records,planned_fte:0
+#: field:hr.department,planned_fte:0
+msgid "Planned FTE"
+msgstr "Geplante FTE (WJ 2017)"
+
+#. module: itis_hr_extend
+#: model:ir.actions.act_window,name:itis_hr_extend.hr_planned_job
+#: model:ir.ui.menu,name:itis_hr_extend.menu_planned_job
+#: view:planned.job:itis_hr_extend.itis_planned_job_tree
+msgid "Planned Jobs"
+msgstr "Planstellen"
+
+#. module: itis_hr_extend
+#: field:hr.employee,planned_job_id:0
+#: field:planned.job,name:0
+msgid "Planstellen"
+msgstr "Planstelle"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_holiday.py:155
+#: code:addons/itis_hr_extend/models/hr_holiday.py:536
+#: code:addons/itis_hr_extend/models/hr_holiday.py:556
+#, python-format
+msgid "Please create a leave request for every year."
+msgstr "Bitte für jedes Jahr einen eigenen Urlaubsantrag stellen."
+
+#. module: itis_hr_extend
+#: field:hr.employee,position:0
+msgid "Position"
+msgstr "Nebentätigkeit"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,address_home:0
+#: field:employee.payroll.report,address_home_id:0
+msgid "Privatanschrift"
+msgstr "Privatanschrift"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Probezeit Enddatum"
+msgstr "Probezeit Enddatum"
+
+#. module: itis_hr_extend
+#: field:ld.change,reason:0
+#: field:ot.change,reason:0
+msgid "Reason"
+msgstr "Begründung"
+
+#. module: itis_hr_extend
+#: field:hr.employee,contract_limitation_reason:0
+msgid "Reason of Limitation"
+msgstr "Reason of Limitation"
+
+#. module: itis_hr_extend
+#: field:hr.employee,sum_leaves_ny:0
+msgid "Remaining Leaves Following Year"
+msgstr "Verbleibender Urlaub Folgejahr"
+
+#. module: itis_hr_extend
+#: field:employee.data.export,report_selection:0
+msgid "Report"
+msgstr "Report"
+
+#. module: itis_hr_extend
+#: model:ir.ui.menu,name:itis_hr_extend.menu_hr_reports
+msgid "Reports"
+msgstr "Berichte"
+
+#. module: itis_hr_extend
+#: model:ir.model,name:itis_hr_extend.model_resource_calendar
+msgid "Resource Calendar"
+msgstr "Ressourcen Kalender"
+
+#. module: itis_hr_extend
+#: selection:hr.leave.journal,year_type:0
+msgid "Restanspruch"
+msgstr "Restanspruch"
+
+#. module: itis_hr_extend
+#: field:hr.employee,leave_days_last_year:0
+msgid "Resturlaub"
+msgstr "Resturlaub"
+
+#. module: itis_hr_extend
+#: model:ir.model,name:itis_hr_extend.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "Vergütungsmodell"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,disability:0
+#: field:hr.employee,disability:0
+msgid "Schwerbehinderung"
+msgstr "Schwerbehinderung"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,disability_limited_until:0
+msgid "Schwerbehinderung Gültigkeit"
+msgstr "Schwerbehinderung Gültigkeit"
+
+#. module: itis_hr_extend
+#: view:hr.leave.journal:itis_hr_extend.itis_hr_leave_journal_form
+msgid "Search Leave"
+msgstr "Suche Abwesenheiten"
+
+#. module: itis_hr_extend
+#: selection:create.emp.payroll,month:0
+msgid "September"
+msgstr "September"
+
+#. module: itis_hr_extend
+#: field:res.company,for_sow17:0
+msgid "Simulate date for leave calc"
+msgstr "Simulate date for leave calc"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Sozialversicherungsnummer"
+msgstr "Sozialversicherungsnummer"
+
+#. module: itis_hr_extend
+#: field:leave.time,fullday_start_time:0
+#: field:leave.time,halfday_afternoon_start_time:0
+#: field:leave.time,halfday_morning_start_time:0
+msgid "Start Time"
+msgstr "Beginn"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Startdatum der letzten Vertragversänderung"
+msgstr "Startdatum der letzten Vertragversänderung"
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+#: field:itis.hr.contact,state_id:0
+msgid "State"
+msgstr "Bundesland"
+
+#. module: itis_hr_extend
+#: field:hr.family.status,name:0
+msgid "Status"
+msgstr "Status"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Steuer-ID"
+msgstr "Steuer-ID"
+
+#. module: itis_hr_extend
+#: field:hr.employee,taxclass:0
+msgid "Steuerklasse"
+msgstr "Steuerklasse"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,taxclass:0
+msgid "Steuerklasse 1"
+msgstr "Steuerklasse 1"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,taxclass:0
+msgid "Steuerklasse 2"
+msgstr "Steuerklasse 2"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,taxclass:0
+msgid "Steuerklasse 3"
+msgstr "Steuerklasse 3"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,taxclass:0
+msgid "Steuerklasse 4"
+msgstr "Steuerklasse 4"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,taxclass:0
+msgid "Steuerklasse 5"
+msgstr "Steuerklasse 5"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,taxclass:0
+msgid "Steuerklasse 6"
+msgstr "Steuerklasse 6"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,street:0
+msgid "Street"
+msgstr "Straße"
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+msgid "Street 2..."
+msgstr "Straße 2..."
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+msgid "Street..."
+msgstr "Straße"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,street2:0
+msgid "Street2"
+msgstr "Straße 2"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,leave_hours:0
+#: selection:hr.leave.journal,leave_type:0
+msgid "Stunden"
+msgstr "Stunden"
+
+#. module: itis_hr_extend
+#: field:employee.instruction,supervisor_id:0
+#: field:employee.meeting,supervisor_id:0
+msgid "Supervisor"
+msgstr "Gesprächspartner"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,leave_days:0
+#: selection:hr.leave.journal,leave_type:0
+#: field:hr.leave.nextyear,leave_days:0
+msgid "Tage"
+msgstr "Tage"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Telefon (interne Durchwahl)"
+msgstr "Telefon (interne Durchwahl)"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_holiday.py:162
+#: code:addons/itis_hr_extend/models/hr_holiday.py:172
+#, python-format
+msgid "The number of next year remaining leaves is not sufficient for this leave type.\n"
+"Please verify also the leaves waiting for validation."
+msgstr "Die Anzahl der verbleibenden Urlaubstage für das Folgejahr reicht, für diesen Urlaubstyp, nicht aus.\n"
+"Bitte überprüfen Sie auch die noch nicht bearbeiteten Urlaubsanträge."
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_holiday.py:168
+#, python-format
+msgid "The number of remaining leaves is not sufficient for this leave type.\n"
+"Please verify also the leaves waiting for validation."
+msgstr "Die Anzahl der verbleibenden Urlaubstage ist nicht ausreichend.\n"
+"Bitte überprüfen Sie auch die noch nicht bearbeiteten Urlaubsanträge."
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:661
+#, python-format
+msgid "There are 2 contracts assigned to this employee."
+msgstr "Es sind dem Mitarbeiter zwei aktive Verträge zugeordnet."
+
+#. module: itis_hr_extend
+#: field:employee.data.export,name:0
+msgid "Timesheet CSV"
+msgstr "Timesheet CSV"
+
+#. module: itis_hr_extend
+#: field:hr.employee,contract_trial_end_date:0
+msgid "Trial End Date"
+msgstr "Trial End Date"
+
+#. module: itis_hr_extend
+#: view:hr.contract:itis_hr_extend.hr_contract_view_form_itis
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+#: view:hr.holidays:itis_hr_extend.hr_holidays_view_form_itis
+msgid "True"
+msgstr "True"
+
+#. module: itis_hr_extend
+#: field:hr.employee,contract_type:0
+#: field:hr.leave.journal,type:0
+#: field:ld.change,type:0
+msgid "Type"
+msgstr "Typ"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:822
+#: code:addons/itis_hr_extend/models/hr_employee.py:834
+#, python-format
+msgid "Umwandlung Resturlaub"
+msgstr "Umwandlung Resturlaub"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Update"
+msgstr "Update"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Urlaub"
+msgstr "Urlaub"
+
+#. module: itis_hr_extend
+#: field:hr.contract,base_leaves:0
+msgid "Urlaubsanspruch"
+msgstr "Urlaubsanspruch"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Urlaubsjournal"
+msgstr "Urlaubsjournal"
+
+#. module: itis_hr_extend
+#: field:hr.employee,leave_days:0
+msgid "Urlaubstage"
+msgstr "Urlaubstage"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/employee_report.py:44
+#, python-format
+msgid "User is associated with multiple employee"
+msgstr "Dem Benutzer sind mehr als ein Mitarbeiter zugeordnet."
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:1091
+#, python-format
+msgid "Verfall Resturlaub"
+msgstr "Verfall Resturlaub"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Vergütung"
+msgstr "Vergütung"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Vergütung bei VZ"
+msgstr "Vergütung bei VZ"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+#: field:hr.employee,remuneration_incl_ag_costs:0
+msgid "Vergütung inkl. AG Kosten (25%)"
+msgstr "Vergütung inkl. AG Kosten (25%)"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,struct_id:0
+msgid "Vergütungsmodell"
+msgstr "Vergütungsmodell"
+
+#. module: itis_hr_extend
+#: selection:hr.leave.journal,type:0
+msgid "Vertraglich"
+msgstr "Vertraglich"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,contract_start_date:0
+msgid "Vertragsbeginn"
+msgstr "Vertragsbeginn"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,contract_end_date:0
+msgid "Vertragsende"
+msgstr "Vertragsende"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "Vertragsinformationen"
+msgstr "Vertragsinformationen"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,contract_name:0
+msgid "Vertragsreferenz"
+msgstr "Vertragsreferenz"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "Vertragstyp"
+msgstr "Vertragstyp"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,surname:0
+#: field:hr.employee,surname:0
+msgid "Vorname"
+msgstr "Vorname"
+
+#. module: itis_hr_extend
+#: field:employee.payroll.report,wage:0
+#: field:hr.employee,contract_wage:0
+#: field:hr.employee,emp_wage_cal:0
+msgid "Wage"
+msgstr "Wage"
+
+#. module: itis_hr_extend
+#: field:hr.employee,wage_info:0
+msgid "Wage Information"
+msgstr "Wage Information"
+
+#. module: itis_hr_extend
+#: field:hr.employee,contract_working_hours:0
+msgid "Working Hours"
+msgstr "Arbeitsstunden"
+
+#. module: itis_hr_extend
+#: field:create.emp.payroll,year:0
+msgid "Year"
+msgstr "Jahr"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,year_type:0
+msgid "Year type"
+msgstr "Typ inerhalb des Jahres"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_holiday.py:158
+#, python-format
+msgid "You are not allow to apply leave for the year after next"
+msgstr "Urlaub für das übernächste Jahr kann noch nicht beantragt werden."
+
+#. module: itis_hr_extend
+#: constraint:hr.holidays:0
+msgid "You can not have 2 leaves that overlaps on same day!"
+msgstr "Sie können nicht zwei sich überschneidende Abwesenheitsanfragen am gleichen Tag anfragen !"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:577
+#, python-format
+msgid "You can only change additional leave days for next year after May month"
+msgstr "Änderungen an Zusatzurlaubstagen Folgejahr können erst ab 01. Juni vorgenommen werden."
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:559
+#, python-format
+msgid "You can only change next year leave after May month"
+msgstr "Änderungen an Urlaubstagen Folgejahr können erst ab 01. Juni vorgenommen werden."
+
+#. module: itis_hr_extend
+#: view:itis.hr.contact:itis_hr_extend.itis_hr_contact_form
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: itis_hr_extend
+#: field:hr.employee,sign_permission:0
+msgid "Zeichnungsbefugnis"
+msgstr "Zeichnungsbefugnis"
+
+#. module: itis_hr_extend
+#: field:itis.hr.contact,zip:0
+msgid "Zip"
+msgstr "Zip"
+
+#. module: itis_hr_extend
+#: field:hr.employee,additional_leave_days:0
+#: selection:hr.leave.journal,type:0
+msgid "Zusatzurlaub"
+msgstr "Zusatzurlaub"
+
+#. module: itis_hr_extend
+#: view:hr.holidays:itis_hr_extend.hr_holidays_view_form_itis
+msgid "[('is_holiday', '!=',True)]"
+msgstr "[('is_holiday', '!=',True)]"
+
+#. module: itis_hr_extend
+#: field:hr.employee,approved_leaves:0
+msgid "abgegoltene Urlaubstage"
+msgstr "abgegoltene Urlaubstage"
+
+#. module: itis_hr_extend
+#: selection:hr.leave.journal,year_type:0
+msgid "aktuell"
+msgstr "aktuell"
+
+#. module: itis_hr_extend
+#: view:hr.payslip:itis_hr_extend.hr_payroll_view_hr_payslip_form_itis
+msgid "base.group_hr_payroll_manager"
+msgstr "base.group_hr_payroll_manager"
+
+#. module: itis_hr_extend
+#: view:hr.holidays:itis_hr_extend.hr_holidays_view_form_itis
+msgid "base.group_user"
+msgstr "base.group_user"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,leave_end:0
+msgid "bis"
+msgstr "bis"
+
+#. module: itis_hr_extend
+#: view:hr.holidays:itis_hr_extend.hr_holidays_view_tree_itis
+msgid "date"
+msgstr "date"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_hr_employee_view_form_itis
+msgid "e.g. Part Time"
+msgstr "z.B. Teilzeit"
+
+#. module: itis_hr_extend
+#: view:hr.holidays:itis_hr_extend.hr_holidays_view_form_itis
+msgid "hours"
+msgstr "Stunden"
+
+#. module: itis_hr_extend
+#: view:hr.employee:itis_hr_extend.hr_emp_data_tree
+msgid "letzte Vertragsänderung_L&G"
+msgstr "letzte Vertragsänderung_L&G"
+
+#. module: itis_hr_extend
+#: selection:hr.employee,br_member:0
+#: selection:hr.employee,disability:0
+msgid "nein"
+msgstr "Nein"
+
+#. module: itis_hr_extend
+#: selection:hr.leave.journal,year_type:0
+msgid "next"
+msgstr "nächste"
+
+#. module: itis_hr_extend
+#: view:create.emp.payroll:itis_hr_extend.emp_payroll_wiz_form_view
+#: view:create.fte:itis_hr_extend.fte_wiz_form_view
+#: view:employee.data.export:itis_hr_extend.employee_data_export_form_view
+#: view:export.emp.payroll:itis_hr_extend.emp_payroll_export_form_view
+#: view:ld.change:itis_hr_extend.ld_change_form_view
+#: view:ot.change:itis_hr_extend.ot_change_form_view
+msgid "or"
+msgstr "oder"
+
+#. module: itis_hr_extend
+#: view:leave.time:itis_hr_extend.itis_leave_timing_tree
+msgid "to"
+msgstr "to"
+
+#. module: itis_hr_extend
+#: field:hr.leave.journal,leave_start:0
+msgid "von"
+msgstr "von"
+
+#. module: itis_hr_extend
+#: field:hr.employee,emergency_contact2:0
+msgid "zweiter Notfallkontakt"
+msgstr "Notfallkontakt2"
+
+#. module: itis_hr_extend
+#: code:addons/itis_hr_extend/models/hr_employee.py:708
+#, python-format
+msgid "Überschneidende Verträge"
+msgstr "Überschneidende Verträge"
+

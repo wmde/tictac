@@ -1,0 +1,68 @@
+<openerp>
+    <data noupdate="1">
+
+        <record id="itis_get_monthly_employee_data_cron" model="ir.cron">
+            <field name="name">ITIS Get Monthly Employee Data</field>
+            <field name="function">get_monthly_employee_data</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <!--<field name="active" eval="(True)"/>-->
+            <field name="numbercall">-1</field>
+            <field name="model">hr.employee</field>
+            <field name="nextcall" eval="(datetime.strptime('2018-02-01 03:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <!--scheduler added for the 1st june-->
+        <record id="itis_june_day_cal_cron" model="ir.cron">
+            <field name="name">ITIS June Year Change</field>
+            <field name="function">june_year_change_calc_days</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">12</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr.employee</field>
+            <field name="nextcall" eval="(datetime.strptime('2019-06-01 02:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+            <!--Imp Note :: This scheduler should run in Dec month.-->
+		<record id="itis_year_change_cron" model="ir.cron">
+            <field name="name">ITIS Jahreswechsel Urlaubsberechnung</field>
+            <field name="function">year_change_calc_days</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">12</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr.employee</field>
+            <field name="nextcall" eval="(datetime.strptime('2019-12-31 19:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <!--Imp Note :: This scheduler should run in Dec month.-->
+        <record id="itis_end_march_cron" model="ir.cron">
+            <field name="name">ITIS Verfall Resturlaub</field>
+            <field name="function">delete_last_year_leave_days</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">12</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr.employee</field>
+            <field name="nextcall" eval="(datetime.strptime('2019-12-31 16:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <!--scheduler to update new overtime count field for the 1st time-->
+        <record id="itis_update_new_overtime" model="ir.cron">
+            <field name="name">ITIS New overtime field update</field>
+            <field name="function">update_new_overtime_field</field>
+            <field name="interval_type">days</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(False)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr.employee</field>
+            <!--<field name="nextcall" eval="(datetime.strptime('2016-12-31 21:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>-->
+        </record>
+    </data>
+</openerp>

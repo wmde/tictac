@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* itis_payroll_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-11 13:57+0000\n"
+"PO-Revision-Date: 2016-12-11 18:57+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: itis_payroll_export
+#: view:payroll.export:itis_payroll_export.payroll_export_form_view
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: itis_payroll_export
+#: view:payroll.export:itis_payroll_export.payroll_export_form_view
+msgid "Click 'Export' button to export payroll csv"
+msgstr "Klicken Sie auf Exportieren um die Lohndaten zu exportieren."
+
+#. module: itis_payroll_export
+#: model:ir.model,name:itis_payroll_export.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: itis_payroll_export
+#: field:payroll.export,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: itis_payroll_export
+#: field:payroll.export,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: itis_payroll_export
+#: view:payroll.export:itis_payroll_export.payroll_export_form_view
+msgid "Export"
+msgstr "Exportieren"
+
+#. module: itis_payroll_export
+#: view:payroll.export:itis_payroll_export.payroll_export_form_view
+msgid "Export file:"
+msgstr "Export Datei:"
+
+#. module: itis_payroll_export
+#: code:addons/itis_payroll_export/wizard/payroll_export.py:101
+#, python-format
+msgid "Exported Payroll"
+msgstr "Exportierter Lohnstapel"
+
+#. module: itis_payroll_export
+#: field:payroll.export,file_name:0
+msgid "File"
+msgstr "Datei"
+
+#. module: itis_payroll_export
+#: field:payroll.export,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: itis_payroll_export
+#: field:payroll.export,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: itis_payroll_export
+#: field:payroll.export,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: itis_payroll_export
+#: field:payroll.export,name:0
+msgid "Payroll CSV"
+msgstr "Lohstapel CSV"
+
+#. module: itis_payroll_export
+#: model:ir.actions.act_window,name:itis_payroll_export.payroll_export_action
+#: model:ir.ui.menu,name:itis_payroll_export.menu_payroll_export
+msgid "Payroll Export"
+msgstr "Lohnstapel Export"
+
+#. module: itis_payroll_export
+#: field:hr.config.settings,sick_account_id:0
+#: field:res.company,sick_account_id:0
+msgid "Sick Account"
+msgstr "Kostenstelle Krankheit"
+
+#. module: itis_payroll_export
+#: view:payroll.export:itis_payroll_export.payroll_export_form_view
+msgid "or"
+msgstr "oder"

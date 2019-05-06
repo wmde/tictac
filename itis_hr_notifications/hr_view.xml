@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+
+		<record id="itis_view_human_resources_configuration" model="ir.ui.view">
+			<field name="name">ITIS hr settings</field>
+			<field name="model">hr.config.settings</field>
+			<field name="inherit_id" ref='hr.view_human_resources_configuration' />
+			<field name="arch" type="xml">
+				<group name="contract_grp" position='after'>
+					<group name="notification_grp">
+						<label for="id" string="Notifications" />
+						<div>
+							<div>
+								<label for="training_end_day" />
+								<field name="training_end_day" class="oe_inline" />
+								<label string=" Weeks" />
+							</div>
+
+							<div>
+								<label for="work_permit" />
+								<field name="work_permit" class="oe_inline" />
+								<label string=" Weeks" />
+							</div>
+
+							<div>
+								<label for="term_end" />
+								<field name="term_end" class="oe_inline" />
+								<label string=" Weeks" />
+							</div>
+
+							<div>
+								<label for="savirity" />
+								<field name="savirity" class="oe_inline" />
+								<label string=" Weeks" />
+							</div>
+
+							<div>
+								<label for="remaining_leaves" />
+								<field name="remaining_leaves" class="oe_inline" />
+								<label string=" Weeks" />
+							</div>
+
+<!-- 							<div> -->
+<!-- 								<label for="over_time" /> -->
+<!-- 								<field name="over_time" class="oe_inline" /> -->
+<!-- 							</div> -->
+						</div>
+					</group>
+				</group>
+
+			</field>
+		</record>
+
+
+
+	</data>
+</openerp>

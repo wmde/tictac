@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<record id="itis_emp_payroll_report_tree" model='ir.ui.view'>
+			<field name="name">itis.emp.payroll.report.tree</field>
+			<field name="model">employee.payroll.report</field>
+			<field name="arch" type="xml">
+				<tree string="Employee Payroll Records" colors="orange:record_change=='V';red:record_change=='ST';red:record_change=='SV' ">
+                    <field name='contract_id' invisible="1"/>
+					<field name='employee_id' invisible="1"/>
+                    <field name="record_change" invisible="1"/>
+
+					<field name='identification_id'/>
+					<field name='name'/>
+					<field name='surname'/>
+					<field name='birthday'/>
+					<field name='address_home_id'/>
+					<field name='address_id'/>
+					<field name='bank_account_id'/>
+					<field name='health_insurance'/>
+					<field name='disability'/>
+					<field name="disability_limited_until"/>
+					<field name='family_status'/>
+					<field name='children'/>
+
+					<field name='contract_name'/>
+					<field name='contract_start_date'/>
+					<field name='contract_end_date'/>
+					<field name='working_hours'/>
+					<field name='struct_id'/>
+					<field name = "gross_salary"/>
+					<field name="wage"/>
+					<field name = "sick_days"/>
+					<field name='notes'/>
+				</tree>
+			</field>
+		</record>
+
+    </data>
+</openerp>

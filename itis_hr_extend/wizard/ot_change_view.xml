@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+    	<record id="ot_change_form_view" model='ir.ui.view'>
+    		<field name="name">ot_change_form_view</field>
+    		<field name="model">ot.change</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<group>
+            			<field name="ot_time" required="1" widget="float_time" invisible="context.get('from_ld_change')"/>
+            			<field name="leave_day" required="1" invisible="context.get('from_ot_change')"/>
+            			<field name="reason" required="1" />
+            		</group>
+            		<footer>
+            			<button name="set_ot_time" string="OK" type="object" class='oe_highlight'/>
+            			or
+            			<button special="cancel" string="Cancel" class='oe_link' />
+            		</footer>
+            	</form>
+            </field>
+    	</record>
+
+		<record id="ld_change_form_view" model='ir.ui.view'>
+    		<field name="name">ld_change_form_view</field>
+    		<field name="model">ld.change</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<group>
+            			<field name="type" required="1" />
+            			<field name="leave_day" required="1" />
+            			<field name="reason" required="1" />
+            		</group>
+            		<footer>
+            			<button name="set_ld_time" string="OK" type="object" class='oe_highlight' invisible="context.get('next_year', False)"/>
+            			<button name="set_nextyear_ld_time" string="OK" type="object" class='oe_highlight' invisible="context.get('current_year', False)"/>
+            			or
+            			<button special="cancel" string="Cancel" class='oe_link' />
+            		</footer>
+            	</form>
+            </field>
+    	</record>
+    </data>
+</openerp>

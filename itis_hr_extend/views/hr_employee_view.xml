@@ -1,0 +1,782 @@
+<openerp>
+    <data>
+
+        <!--<record id="resource_calendar_form_inherit" model="ir.ui.view">-->
+            <!--<field name="name">resource_calendar_form_inherit</field>-->
+            <!--<field name="model">resource.calendar</field>-->
+            <!--<field name="inherit_id" ref="resource.resource_calendar_form"/>-->
+            <!--<field name="arch" type="xml">-->
+            	<!--<xpath expr="//field[@name='company_id']" position="after">-->
+            		<!--<field name='hourly_basis'/>-->
+            	<!--</xpath>-->
+    		<!--</field>-->
+   		<!--</record>-->
+
+    	<record id="hr_department_view_form_itis" model="ir.ui.view">
+            <field name="name">hr_department_view_form_itis</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='company_id']" position="after">
+            		<field name='planned_fte'/>
+                    <field name="account_id"/>
+            	</xpath>
+    		</field>
+   		</record>
+
+        <record id="act_hr_leaves_overview" model="ir.actions.act_window">
+            <field name="res_model">hr.leave.journal</field>
+            <!--<field name="src_model">hr.employee</field>-->
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="name">Leaves</field>
+            <field name="context">{'search_default_employee_id': [active_id], 'default_employee_id': active_id}</field>
+            <!--<field name="context">{'default_employee_id': active_id}</field>-->
+        </record>
+
+        <record id="itis_leave_journal_tree" model="ir.ui.view">
+            <field name="name">hr_leave_journal_tree</field>
+            <field name="model">hr.leave.journal</field>
+            <!--<field name="view_type">tree</field>-->
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="year"/>
+                    <field name="year_type"/>
+                    <field name="type"/>
+                    <field name="leave_type"/>
+                    <field name="leave_start"/>
+                    <field name="leave_end"/>
+                    <field name="leave_days"/>
+                    <field name="leave_hours"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="itis_leave_journal_form" model="ir.ui.view">
+            <field name="name">hr_leave_journal_form</field>
+            <field name="model">hr.leave.journal</field>
+            <!--<field name="view_type">form</field>-->
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="employee_id"/>
+                        <field name="year"/>
+                        <field name="year_type"/>
+                        <field name="type"/>
+                        <field name="leave_type"/>
+                        <field name="leave_start"/>
+                        <field name="leave_end"/>
+                        <field name="leave_days"/>
+                        <field name="leave_hours"/>
+                        <field name="contract_id"/>
+                        <field name="leave_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="itis_hr_leave_journal_form" model="ir.ui.view">
+            <field name="name">hr_leave_journal_form</field>
+            <field name="model">hr.leave.journal</field>
+            <field name="arch" type="xml">
+                <search string="Search Leave">
+                    <field name="employee_id"/>
+                    <field name="year"/>
+                    <field name="year_type"/>
+                    <field name="type"/>
+                     <group expand="0" string="Group By">
+                        <filter string="Jahr" icon="terp-personal" domain="[]" context="{'group_by':'year'}"/>
+                        <filter string="Jahr Art" icon="terp-personal" domain="[]" context="{'group_by':'year_type'}"/>
+                        <filter string="Art" icon="terp-personal" domain="[]" context="{'group_by':'type'}"/>
+                        <filter string="Leave Type" icon="terp-personal" domain="[]" context="{'group_by':'leave_type'}"/>
+                     </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_hr_employee_view_form_itis" model="ir.ui.view">
+            <field name="name">hr_hr_employee_view_form_itis</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+            <field name="arch" type="xml">
+
+                <!--#added new field for the following year june1st SOW17-->
+                <xpath expr="//group[@string='Contract']" position="before">
+                    <group string="Leaves Following Year">
+                        <label for="leave_days_ny"/>
+                        <div>
+                            <field name="leave_days_ny" class="oe_inline" />
+                            <button name="open_nextyear_leaved_day_change" type="object" class="oe_link" string="Update"/>
+                        </div>
+                        <label for="additional_leave_days_ny"/>
+                        <div>
+                            <field name="additional_leave_days_ny" class="oe_inline" />
+                            <button name="open_nextyear_add_day_change" type="object" class="oe_link" string="Update"/>
+                        </div>
+                        <label for="approved_leaves_ny"/>
+                        <div>
+                            <field name="approved_leaves_ny" class="oe_inline" />
+                        </div>
+                        <label for="sum_leaves_ny"/>
+                        <div>
+                            <field name="sum_leaves_ny" class="oe_inline" />
+                        </div>
+                        <!--<br/>-->
+                        <label for="approved_leaves_till_march_ny"/>
+                        <div>
+                            <field name="approved_leaves_till_march_ny" class="oe_inline" />
+                        </div>
+                        <label for="approved_leaves_after_march_ny"/>
+                        <div>
+                            <field name="approved_leaves_after_march_ny" class="oe_inline" />
+                        </div>
+                        <!--<button name="year_change_calc_days" string="Check" type="object"/>-->
+                        <field name="nextyear_leave_ids" nolabel="1" invisible="1">
+                            <tree>
+                                <field name="date"/>
+                                <field name="leave_days"/>
+                                <field name="holiday_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+
+            	<xpath expr="//group[@string='Leaves']/div" position="after">
+                    <label for="leave_days"/>
+            		<div>
+                        <field name="leave_days" class="oe_inline" readonly="1"/>
+                        <button name="open_leaved_day_change" type="object" class="oe_link" string="Update"/>
+                    </div>
+                    <label for="additional_leave_days"/>
+            		<div>
+                        <field name="additional_leave_days" class="oe_inline" readonly="1"/>
+                        <button name="open_ld_change" type="object" class="oe_link" string="Update"/>
+                    </div>
+                    <label for="leave_days_last_year"/>
+                    <div>
+                        <field name="leave_days_last_year" class="oe_inline" readonly="1"/>
+                    </div>
+                    <label for="approved_leaves"/>
+            		<div>
+                        <field name="approved_leaves" class="oe_inline" readonly="1"/>
+                    </div>
+                    <label for="sum_leaves"/>
+            		<div>
+                        <field name="sum_leaves" class="oe_inline" readonly="1"/>
+                    </div>
+            		<label for="overtime_count" invisible="1"/>
+            		<div invisible="1">
+	            		<field name="overtime_count" widget="float_time" class="oe_inline" readonly="1" invisible="1"/>
+
+            		</div>
+                    <label for="computed_overtime_count"/>
+            		<div>
+                        <field name="computed_overtime_count" widget="float_time" class="oe_inline" />
+                        <button name="open_ot_change" type="object" class="oe_link" string="Update"/>
+                    </div>
+                    <!--<label for="employee_overtime_id"/>-->
+            		<!--<div>-->
+                        <!--<field name="employee_overtime_id" />-->
+                    <!--</div>-->
+                    <!--Additional field to show remaining leaves from last year-->
+                    <br/><br/>
+                    <label for="last_year_remaining_leaves"/>
+            		<div>
+                        <field name="last_year_remaining_leaves" />
+                    </div>
+            	</xpath>
+                <xpath expr="//group[@string='Leaves']/div" position="attributes">
+                        <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//group[@string='Leaves']/label" position="attributes">
+                        <attribute name="invisible">True</attribute>
+                </xpath>
+                <label for="name" position="attributes">
+                    <attribute name="string">Mitarbeiter/in</attribute>
+                </label>
+                <label for="work_phone" position="attributes">
+                    <attribute name="string">Telefon (interne Durchwahl)</attribute>
+                    <attribute name="class"/>
+                </label>
+
+                <label for="category_ids" position="replace"></label>
+                <field name="category_ids" position="replace"></field>
+                <field name="medic_exam" position="before">
+                    <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time" groups="base.group_hr_user"/>
+                    <field name="fte"/>
+                    <field name="initial_date"/>
+                    <field name="temp_contract_end_date"/>
+                </field>
+
+                <xpath expr="//field[@name='vehicle_distance']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <field name="medic_exam" position="after">
+                    <field name="position"/>
+                </field>
+
+                <field name="work_location" position="replace"></field>
+                <field name="passport_id" position="attributes">
+                    <attribute name="string">Sozialversicherungsnummer</attribute>
+                </field>
+                <field name="otherid" position="attributes">
+                    <attribute name="string">Steuer-ID</attribute>
+                </field>
+                <field name="otherid" position="after">
+                    <field name="taxclass"/>
+                    <field name="confession"/>
+                    <field name="health_insurance" widget="selection"/>
+                    <field name="disability"/>
+                    <field name="disability_limited_until" attrs="{'invisible': [('disability','!=','yes')]}"/>
+                    <field name="sign_permission" invisible="1"/>
+                </field>
+                <field name="address_home_id" position="after">
+                    <field name="emergency_contact"/>
+                    <field name="emergency_contact2"/>
+                </field>
+                <field name="children" position="after">
+                    <field name="children_ids" string="Kinder">
+                        <tree>
+                            <field name="name"/>
+                            <field name="birth_date"/>
+                        </tree>
+                    </field>
+                </field>
+                <page string="HR Settings" position="attributes">
+                    <attribute name="string">Vertragsinformationen</attribute>
+                </page>
+                <field name="address_home_id" position="before">
+                    <!--<label for="surname"/>-->
+                    <field name="surname"/>
+                    <!--<label for="second_name"/>-->
+                    <field name="second_name"/>
+                </field>
+                <field name="place_of_birth" position="after">
+                    <field name="birth_name"/>
+                </field>
+                <field name="active" position="after">
+                    <field name="five_years"/>
+                </field>
+                <field name="department_id" position="before">
+                    <field name="bereich"/>
+                </field>
+                <!--do not display the field is a manager-->
+                <field name="manager" position="replace"/>
+                <label for="work_email" position="attributes">
+                    <attribute name="class"/>
+                </label>
+                <xpath expr="//group[@name='active_group']" position='after'>
+
+                    <group string="Meeting">
+                        <field name="last_ma_conversation_date"/>
+                        <field name="employee_instruction_id"/>
+                    </group>
+
+                	<group string="FTEs">
+                		<field name="fte_ids" nolabel='1' colspan='4'>
+                		<tree editable='bottom'>
+                			<field name='department_id'/>
+                			<field name='fte' string="FTE(%)"/>
+                		</tree>
+                		</field>
+                	</group>
+                </xpath>
+                <xpath expr="//field[@name='vehicle']" position='attributes'>
+                	<attribute name='invisible'>1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='marital']" position='replace'>
+                	<field name='family_status' widget="selection"/>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(act_hr_leaves_overview)d"
+                        type="action"
+                        class="oe_stat_button"
+                        icon="fa-clock-o"
+                        groups="base.group_hr_manager">
+                        <field name="sum_journal_entries" widget="statinfo" string="Urlaubsjournal"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- hr employee form view-->
+        <record id="view_employee_form_inherit_itis" model="ir.ui.view">
+            <field name="name">hr.employee.form.itis.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <div name="button_box" position="inside">
+                    <button name="%(act_hr_employee_meeting)d"
+                        string="Meetings"
+                        class="oe_stat_button"
+                        icon="fa-calendar"
+                        type="action"
+                        >
+                    </button>
+                    <button name="%(act_hr_employee_instruction)d"
+                        string="Memo"
+                        class="oe_stat_button"
+                        icon="fa-calendar"
+                        type="action"
+                        >
+                    </button>
+                </div>
+
+                <field name="mobile_phone" position="after">
+                    <field name="executive_employee"/>
+                </field>
+
+                <field name="job_id" position="after">
+                    <field name="planned_job_id" widget="selection"/>
+                </field>
+
+                <field name="coach_id" position="after">
+                    <field name="br_member"/>
+                </field>
+
+                <page string="HR Settings" position="after">
+                    <page string="Bemerkungen" name="wage_information" groups="base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user">
+                        <group>
+                            <field name="wage_info" nolabel="1"/>
+                        </group>
+                        <!--TODO this section consists of fields created by the customer, they are not present in the dev environment-->
+                        <!--TODO On dev environment this section needs to be commented-->
+                        <group>
+                            <field name="x_Kuendigungsfrist" nolabel="0"/>
+                        </group>
+                        <group>
+                            <field name="x_BVG" nolabel="0"/>
+                            <field name="x_BVG-Ausgabe" nolabel="0"/>
+                            <field name="x_BVG-Preis" nolabel="0"/>
+                            <field name="x_BVG_Ring" nolabel="0"/>
+                            <field name="x_BVG-Rueckgabe" nolabel="0"/>
+                        </group>
+                        <group>
+                            <field name="x_BAV" nolabel="0"/>
+                            <field name="x_BAV-aufklaerung" nolabel="0"/>
+                            <field name="x_BAV-Anbieter" nolabel="0"/>
+                            <field name="x_BAV-Versicherung" nolabel="0"/>
+                            <field name="x_BAV-Intervall" nolabel="0"/>
+                            <field name="x_BAV-Start" nolabel="0"/>
+                            <field name="x_BAV-Ende" nolabel="0"/>
+                            <field name="x_BAV-AG-Anteil" nolabel="0"/>
+                            <field name="x_BAV-AN-Anteil" nolabel="0"/>
+                            <field name="x_BAV-Kommentar"></field>
+                        </group>
+                    </page>
+                </page>
+
+            </field>
+        </record>
+
+         <record id="view_hr_employee_grade_form_inherit_itis" model="ir.ui.view">
+            <field name="name">hr.payroll.structure.form.inherit.itis</field>
+            <field name="model">hr.payroll.structure</field>
+             <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="base_on_hours" string="Basiert auf Stundens"/>
+                </field>
+            </field>
+        </record>
+
+        <!--contract tree view-->
+        <record id="hr_contract_view_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.view.tree.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="employee_id" position="before">
+                    <field name="itis_contract_type"/>
+                </field>
+            </field>
+        </record>
+
+         <!--Inherit Form View to Modify it-->
+        <record id="hr_contract_view_form_itis" model="ir.ui.view">
+            <field name="name">hr_contract_view_form_itis</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <field name="working_hours" position="before">
+                    <field name="limitation_reason"/>
+                </field>
+                <field name="working_hours" position="after">
+                    <field name="base_leaves" required="True"/>
+                </field>
+                <field name="type_id" position="after">
+                    <field name="itis_contract_type" />
+                </field>
+                <field name="working_hours" position="attributes">
+                    <attribute name="required">True</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="itis_employee_children_form" model="ir.ui.view">
+            <field name="name">itis_employee_childrenform</field>
+            <field name="model">itis_employee_children</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="birth_date"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+         <!--Inherit Form View to Modify it-->
+        <record id="hr_payroll_view_hr_payslip_form_itis" model="ir.ui.view">
+            <field name="name">hr_payroll_view_hr_payslip_form_itis</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                    <button name="hr_verify_sheet" position="attributes">
+                        <attribute name="groups">base.group_hr_payroll_manager</attribute>
+                    </button>
+            </field>
+        </record>
+        
+        
+        
+        <record id="itis_hr_contact_tree" model="ir.ui.view">
+            <field name="name">itis.hr.contact.tree</field>
+            <field name="model">itis.hr.contact</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Contacts">
+                    <field name="name" string="Name"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="itis_hr_contact_form" model="ir.ui.view">
+            <field name="name">itis.hr.contact.form</field>
+            <field name="model">itis.hr.contact</field>
+            <field name="arch" type="xml">
+                <form>
+                	<sheet>
+	                	<div class="oe_title">
+		                	<h1>
+		                        <field name="name" default_focus="1" placeholder="Name"/>
+		                    </h1>
+	                    </div>
+	                    <group>
+	                        <group>
+	                            <label for="street" string="Address"/>
+	                            <div class="o_address_format">
+	                                <field name="street" placeholder="Street..." class="o_address_street"/>
+	                                <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+	                                <field name="city" placeholder="City" class="o_address_city"/>
+	                                <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+	                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+	                                <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+	                            </div>
+	                        </group>
+	                        <group>
+	                            <field name="phone" widget="phone"/>
+	                            <field name="mobile" widget="phone"/>
+	                            <field name="fax"/>
+	                            <field name="email" widget="email"/>
+	                        </group>
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <record id="action_itis_hr_contact" model="ir.actions.act_window">
+            <field name="name">Contacts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">itis.hr.contact</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem action="action_itis_hr_contact" groups="base.group_hr_manager" id="itis_hr_contact_menu" name='HR Contacts' parent="hr.menu_hr_main" sequence='100'/>
+
+
+
+        <record id="hr_emp_data_tree" model='ir.ui.view'>
+			<field name="name">hr.emp.data.tree</field>
+			<field name="model">hr.employee</field>
+            <field name="priority">100</field>
+			<field name="arch" type="xml">
+				<tree string="Mitarbeiterdaten" >
+					<field name="identification_id" />
+    				<field name="surname" />
+					<field name="second_name" />
+					<field name="birthday" />
+					<field name="address_id" string="Company"/>
+					<field name="bereich" />
+					<field name="department_id" />
+					<field name="planned_job_id" />
+					<field name="job_id" />
+					<field name="contract_type" string="Vertragstyp"/>
+					<field name="initial_date" />
+					<field name="temp_contract_end_date" string="Enddatum befristeter Vertrag"/>
+					<field name="contract_limitation_reason" string="Befristungsgrund"/>
+					<field name="contract_trial_end_date" string="Probezeit Enddatum"/>
+					<field name="last_ma_conversation_date" string="Letztes MA Gespraech"/>
+					<field name="five_years" />
+					<field name="contract_working_hours" />
+					<field name="contract_leaves" string="Urlaub"/>
+                    <field name="disability" />
+                    <field name="last_contract_changed_wage" string="letzte Vertragsänderung_L&amp;G" />
+                    <field name="last_contract_changed_date" string="Startdatum der letzten Vertragversänderung" />
+					<!--<field name="contract_wage" string="Vergütung"/>-->
+					<field name="emp_wage_cal" string="Vergütung"/>
+					<field name="compensation_at_vz" string="Vergütung bei VZ"/>
+					<field name="remuneration_incl_ag_costs" string="Vergütung inkl. AG Kosten (25%)"/>
+					<field name="br_member" />
+					<field name="contract_notes" string="Bemerkungen"/>
+					<field name="parent_id" />
+
+				</tree>
+			</field>
+		</record>
+
+        <record id="action_sever_itis_emp_data" model="ir.actions.server">
+            <field name="state">code</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="code">action = model.open_emp_data_tree()</field>
+            <field name="condition">True</field>
+            <field name="name">Personalübersicht</field>
+        </record>
+
+        <!--<record id="action_itis_emp_data" model="ir.actions.act_window">-->
+            <!--<field name="name">Personalübersicht</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">hr.employee</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_id" ref="hr_emp_data_tree"/>-->
+        <!--</record>-->
+        <menuitem action="action_sever_itis_emp_data" groups="base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user" id="itis_emp_data_menu_server" name='Personalübersicht' parent="hr.menu_hr_main" sequence='50'/>
+
+
+
+        <record id="itis_health_insurance_form" model='ir.ui.view'>
+			<field name="name">hr.health.insurance.form</field>
+			<field name="model">hr.health.insurance</field>
+			<field name="arch" type="xml">
+				<form string="Health Insurance">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" required='1' />
+							</h1>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="itis_health_insurance_tree" model='ir.ui.view'>
+			<field name="name">hr.health.insurance.tree</field>
+			<field name="model">hr.health.insurance</field>
+			<field name="arch" type="xml">
+				<tree string="Health Insurance">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="hr_health_action" model="ir.actions.act_window">
+			<field name="name">Health Insurance</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">hr.health.insurance</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	
+		<menuitem name="Health Insurance" parent="hr.menu_hr_configuration" action="hr_health_action"
+			id="menu_health_insurance" groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+
+        <record id="itis_planned_job_tree" model='ir.ui.view'>
+			<field name="name">planned_jobs_tree</field>
+			<field name="model">planned.job</field>
+			<field name="arch" type="xml">
+				<tree string="Planned Jobs">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="hr_planned_job" model="ir.actions.act_window">
+			<field name="name">Planned Jobs</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">planned.job</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem name="Planned Jobs" parent="hr.menu_hr_configuration" action="hr_planned_job"
+			id="menu_planned_job" groups='base.group_hr_payroll_manager,base.group_hr_manager'/>
+
+        <record id="itis_family_status_form" model='ir.ui.view'>
+			<field name="name">hr.family.status.form</field>
+			<field name="model">hr.family.status</field>
+			<field name="arch" type="xml">
+				<form string="Family Status">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only"/>
+							<h1>
+								<field name="name" required='1'/>
+							</h1>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<record id="itis_family_status_tree" model='ir.ui.view'>
+			<field name="name">hr.family.status.tree</field>
+			<field name="model">hr.family.status</field>
+			<field name="arch" type="xml">
+				<tree string="Family Status">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="hr_family_status_action" model="ir.actions.act_window">
+			<field name="name">Family Status</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">hr.family.status</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+	
+		<menuitem name="Family Status" parent="hr.menu_hr_configuration" action="hr_family_status_action"
+			id="menu_family_status" groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+        
+		<record id="itis_leave_days_calc_error_tree" model='ir.ui.view'>
+			<field name="name">leave.days.calc.error.tree</field>
+			<field name="model">itis.leave.days.calc.error</field>
+			<field name="arch" type="xml">
+				<tree string="Family Status">
+					<field name="name"/>
+					<field name="year"/>
+					<field name="error"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="leave_days_calc_error_action" model="ir.actions.act_window">
+			<field name="name">Fehler Urlaubsberechnung</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">itis.leave.days.calc.error</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Fehler Urlaubsberechnung" parent="hr.menu_hr_configuration" action="leave_days_calc_error_action"
+			id="menu_days_calc_error" groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+
+        <record id="itis_leave_timing_tree" model='ir.ui.view'>
+			<field name="name">leave.time.tree</field>
+			<field name="model">leave.time</field>
+			<field name="arch" type="xml">
+				<form string="Leave Time">
+                    <sheet>
+                        <group>
+                            <field name = "active" required="1"/>
+                        </group>
+					    <group>
+                            <label for="fullday_start_time" string="Full Day Period"/>
+                            <div><field name="fullday_start_time" class="oe_inline" required="1"/> to <field name="fullday_end_time" class="oe_inline" required="1"/></div>
+                        </group>
+                        <group>
+                            <label for="halfday_morning_start_time" string="Halfday Morning Period"/>
+                            <div><field name="halfday_morning_start_time" class="oe_inline" required="1"/> to <field name="halfday_morning_end_time" class="oe_inline" required="1"/></div>
+                        </group>
+                        <group>
+                            <label for="halfday_afternoon_start_time" string="Halfday Afternoon Period"/>
+                            <div><field name="halfday_afternoon_start_time" class="oe_inline" required="1"/> to <field name="halfday_afternoon_end_time" class="oe_inline" required="1"/></div>
+                        </group>
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+
+        <record id="payroll_hr_employee_view_form_inherit" model="ir.ui.view">
+            <field name="name">payroll.hr.employee.view.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_payroll.payroll_hr_employee_view_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//button[@name='%(hr_payroll.act_hr_employee_payslip_list)d']" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="hr_office_time_action" model="ir.actions.act_window">
+			<field name="name">Office Leave Timing</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">leave.time</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+        
+        <menuitem name="Office Time" parent="hr.menu_hr_configuration" action="hr_office_time_action"
+			id="menu_office_time" groups='base.group_hr_payroll_manager,base.group_hr_manager'/>
+
+
+        <record id="emp_overtime_count_tree" model='ir.ui.view'>
+			<field name="name">emp.overtime.count.tree</field>
+			<field name="model">employee.overtime.count</field>
+			<field name="arch" type="xml">
+				<tree string="Employee Overtime Count" create="false" delete="false">
+					<field name="employee_id"/>
+					<field name="emp_overtime_count" readonly="1"/>
+				</tree>
+			</field>
+		</record>
+
+        <record id="emp_overtime_count_form" model='ir.ui.view'>
+			<field name="name">emp.overtime.count.form</field>
+			<field name="model">employee.overtime.count</field>
+			<field name="arch" type="xml">
+				<form string="Employee Overtime Count" create="false" delete="false">
+                    <sheet>
+                        <group>
+                           <field name="employee_id"/>
+                            <field name="emp_overtime_count" readonly="1"/>
+                        </group>
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+        <record id="emp_overtime_count_action" model="ir.actions.act_window">
+			<field name="name">Employee Overtime Count</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">employee.overtime.count</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+        <menuitem name="Employee Overtime Count" parent="hr.menu_hr_configuration" action="emp_overtime_count_action"
+			id="menu_emp_overtime_count" groups='base.group_hr_payroll_manager,base.group_hr_manager'/>
+    </data>
+</openerp>

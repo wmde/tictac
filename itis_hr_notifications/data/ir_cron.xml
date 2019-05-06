@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="ir_cron_hr_contract_notify"
+			model="ir.cron">
+			<field name="name">HR Contract Notifications</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall" />
+			<field eval="'hr.contract'" name="model" />
+			<field eval="'send_notification'" name="function" />
+			<field eval="'()'" name="args" />
+		</record>
+		
+		
+		<record id="ir_cron_hr_notify_disable"
+			model="ir.cron">
+			<field name="name">Employee Disability</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall" />
+			<field eval="'hr.employee'" name="model" />
+			<field eval="'check_disability'" name="function" />
+			<field eval="'()'" name="args" />
+		</record>
+		
+		<record id="ir_cron_hr_leave_bal"
+			model="ir.cron">
+			<field name="name">Employee Leave Balance</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall" />
+			<field eval="'hr.employee'" name="model" />
+			<field eval="'check_leave_bal'" name="function" />
+			<field eval="'()'" name="args" />
+		</record>
+		
+		<record id="ir_cron_hr_employee_overtime"
+			model="ir.cron">
+			<field name="name">Employee Overtime</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">months</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall" />
+			<field eval="'hr.employee'" name="model" />
+			<field eval="'check_overtime'" name="function" />
+			<field eval="'()'" name="args" />
+		</record>
+		
+		
+	</data>
+</openerp>

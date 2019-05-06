@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<openerp>
+
+    <data>
+
+        <!-- hr holidays form view -->
+        <record id="view_holiday_new_calendar_inherit_itis" model="ir.ui.view">
+            <field name="name">Leave Request Inherit</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.view_holiday_new_calendar"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='holiday_status_id']" position="after">
+                    <field name="holiday_name" readonly="1"/>
+                </xpath>
+                <field name="employee_id" position="before">
+                    <field name="state_value"/>
+                </field>
+            </field>
+        </record>
+   </data>
+</openerp>

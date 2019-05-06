@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim:fdl=1: -->
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="hr_timesheet_sheet.WeeklyTimesheet">
+        <t t-jquery=".oe_timesheet_weekly table" t-operation="replace">
+
+            <table>
+                <tr>
+                    <th class="oe_timesheet_first_col"> </th>
+                    <t t-foreach="widget.dates" t-as="date">
+
+                        <t t-set="holiday_condition" t-value="0"/><!--Add a logic to check the holiday list and compare with the dates and base upon that add a class-->
+                        <t t-foreach="widget.holiday" t-as="holiday_date">
+                            <t  t-if="date.toString('yyyy-MM-dd') == holiday_date" t-set="holiday_condition" t-value="1"/>
+                        </t>
+
+
+                        <th t-att-class="'oe_timesheet_weekly_date_head' + (Date.compare(date, Date.today()) === 0 ? ' oe_timesheet_weekly_today' : '')
+                         + (date.toString('ddd') =='Sat' ? ' oe_timesheet_weekend' : '')+ (date.toString('ddd') =='Sun' ? ' oe_timesheet_weekend' : '')
+                         + (date.toString('ddd') =='Sa' ? ' oe_timesheet_weekend' : '')+ (date.toString('ddd') =='So' ? ' oe_timesheet_weekend' : '')
+                         + (holiday_condition == 1 ? ' oe_timesheet_weekend' : '')">
+
+                            <t t-esc="date.toString('ddd')" class ="oe_timesheet_weekend" /><br />
+                            <t t-esc="date.toString('MMM d')"/>
+                        </th>
+
+
+
+                    </t>
+                    <th class="oe_timesheet_weekly_date_head">Total</th>
+                </tr>
+                <tr t-foreach="widget.accounts" t-as="account">
+                    <td class="oe_timesheet_weekly_account"><a href="javascript:void(0)" t-att-data-id="JSON.stringify(account.account)"><t t-esc="widget.account_names[account.account]"/></a></td>
+                    <t t-set="day_count" t-value="0"/>
+                    <t t-foreach="account.days" t-as="day">
+                        <td t-att-class="(Date.compare(day.day, Date.today()) === 0 ? 'oe_timesheet_weekly_today' : '')">
+                            <input t-if="!widget.get('effective_readonly')" class="oe_timesheet_weekly_input" t-att-data-account="account.account"
+                                t-att-data-day-count="day_count" type="text"/>
+                            <span t-if="widget.get('effective_readonly')" t-att-data-account="account.account"
+                                t-att-data-day-count="day_count" class="oe_timesheet_weekly_box"/>
+                            <t t-set="day_count" t-value="day_count + 1"/>
+                        </td>
+                    </t>
+                    <td t-att-data-account-total="account.account" class="oe_timesheet_total"> </td>
+                </tr>
+                <tr class="oe_timesheet_weekly_add_row" style="display: none">
+                    <td class = "oe_timesheet_weekly_add_row_account">
+
+                    </td>
+                    <td class = "oe_timesheet_weekly_add_row_service">
+
+                    </td>
+                    <td class = "oe_timesheet_weekly_add_row_comment">
+
+                    </td>
+                    <td t-att-colspan="widget.dates.length + 4">
+                        <button class="oe_highlight">Add</button>
+                    </td>
+                </tr>
+                <tr class="oe_timesheet_total">
+                    <td>
+                        <div class="oe_timesheet_weekly_adding_tot">
+                            <div t-if="!widget.get('effective_readonly')" class="oe_timesheet_weekly_adding"><button class="oe_timesheet_button_add">Add a Line</button></div>
+                            <div class="oe_timesheet_weekly_tottot"><span>Total</span></div>
+                        </div>
+                    </td>
+                    <t t-set="day_count" t-value="0"/>
+                    <t t-foreach="widget.dates" t-as="date">
+                        <td class="oe_timesheet_total">
+                            <span class="oe_timesheet_weekly_box" t-att-data-day-total="day_count">
+                            </span>
+                            <t t-set="day_count" t-value="day_count + 1"/>
+                        </td>
+                    </t>
+                    <td class="oe_timesheet_weekly_supertotal oe_timesheet_total"> </td>
+                </tr>
+            </table>
+
+        </t>
+    </t>
+
+    <t t-extend="hr_timesheet_sheet.WeeklyTimesheet">
+        <t t-jquery=".oe_timesheet_weekly table" t-operation="append">
+        	<tr class="oe_timesheet_total">
+                <td>
+                    <div class="oe_timesheet_weekly_adding_tot">
+                        <div class="oe_timesheet_weekly_tottot"><span>Planned Hours</span></div>
+                    </div>
+                </td>
+                <t t-foreach="widget.planned_hours" t-as="pl_hrs">
+                    <td class="oe_timesheet_total">
+                        <span t-att-data-pln-dt="pl_hrs.sheet_date"/>
+                    </td>
+                </t>
+                <td class="oe_ph_hrs_total oe_timesheet_total"></td>
+            </tr>
+            <tr class="oe_timesheet_total">
+                <td>
+                    <div class="oe_timesheet_weekly_adding_tot">
+                        <div class="oe_timesheet_weekly_tottot"><span>Overtime Hours</span></div>
+                    </div>
+                </td>
+                <t t-foreach="widget.planned_hours" t-as="pl_hrs">
+                    <td class="oe_timesheet_total">
+                        <span t-att-data-ovr-tm="pl_hrs.sheet_date"/>
+                    </td>
+                </t>
+                <td class="oe_ovr_tm_total oe_timesheet_total"></td>
+            </tr>
+        </t>
+    </t>
+
+
+
+</templates>

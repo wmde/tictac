@@ -1,0 +1,28 @@
+<openerp>
+    <data noupdate="1">
+        <record id="itis_holiday_leave_type_new" model="hr.holidays.status">
+            <field name="name">Holiday</field>
+            <field name="limit">True</field>
+            <field name="is_holiday">True</field>
+        </record>
+
+		<record id="email_template_monthly_timesheet_overview" model="email.template">
+			<field name="name">Monthly Timesheet Overview</field>
+			<field name="model_id" ref="itis_hr_attendance_extend.model_hr_analytic_timesheet" />
+			<field name="auto_delete" eval="True" />
+			<field name="email_from">${(user.email or '') | safe}</field>
+			<field name="email_to">${(user.email or '') | safe}</field>
+			<field name="subject">Monthly Timesheet Overview Report</field>
+			<field name="body_html"><![CDATA[
+			<p>Sehr geehrte Kollegen,</p>
+			<br/>
+			<p>anbei erhalten Sie den aktuellen Report zur Kostenstellenübersicht nach Mitarbeiter.
+			</p><br/>
+			<p>Mit freundlichen Grüßen</p>
+			<p>Ihr HR-Team</p>
+			]]>
+			</field>
+		</record>
+    </data>
+
+</openerp>

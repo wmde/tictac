@@ -1,0 +1,59 @@
+<openerp>
+    <data noupdate="1">
+		<record id="limit_reason_sachgrundlos" model="itis_limitation_reason">
+        	<field name="name">Sachgrundlos</field>
+    	</record>
+        <record id="limit_reason_projektbefristet" model="itis_limitation_reason">
+        	<field name="name">Projektbefristet</field>
+    	</record>
+        <record id="limit_reason_elternzeit" model="itis_limitation_reason">
+        	<field name="name">Elternzeit/Mutterschutz</field>
+    	</record>
+        <record id="limit_reason_krankheit" model="itis_limitation_reason">
+        	<field name="name">Krankheit</field>
+    	</record>
+        <record id="limit_reason_sabbatical" model="itis_limitation_reason">
+        	<field name="name">Sabbatical Vertretung</field>
+    	</record>
+		<record id="lshop_order_creation_path" model="ir.config_parameter">
+            <field name="key">fte.base</field>
+            <field name="value">40</field>
+        </record>
+        
+        <record id="itis_leave_overtime" model='hr.holidays.status'>
+        	<field name="name">Overtime Leave</field>
+        	<field name="color_name">magenta</field>
+        	<field name="limit">1</field>
+        </record>
+        
+    </data>
+    <data>
+   	    <record id="hr_holidays.property_rule_holidays_employee" model="ir.rule">
+	        <field name="name">Employee Holidays</field>
+	        <field name="model_id" ref="model_hr_holidays"/>
+	        <field name="domain_force">['|', ('employee_id.user_id','=',user.id), ('employee_id', 'child_of', [x.id for x in user.employee_ids])]</field>
+	        <field name="perm_create" eval="False"/>
+	        <field name="perm_write" eval="True"/>
+	        <field name="perm_read" eval="True"/>
+	        <field name="perm_unlink" eval="False"/>
+	        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+	    </record>
+	    <delete model="ir.rule" id="resource.resource_own_leaves"/>
+	    <record model="ir.rule" id="resource.resource_own_leaves">
+	        <field name="name">Resource: see own leaves</field>
+	        <field name="model_id" ref="resource.model_resource_calendar_leaves"/>
+	        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+	        <field name="domain_force">['|','|',
+	                                        ('resource_id', '=', False),
+	                                        ('resource_id.user_id', '=', user.id),
+	                                        ('resource_id.user_id', '!=', user.id),
+	                                    ]</field>
+	    </record>
+	    <record model="workflow.transition" id="hr_holidays.holiday_confirm2validate"> <!-- 2. submitted->accepted (validate signal) if not double_validation-->
+	        <field name="group_id" ref="base.group_user"/>
+	    </record>
+	    <record model="workflow.transition" id="hr_holidays.holiday_validate2refuse"> <!-- 3. accepted->refused (refuse signal) -->
+	        <field name="group_id" ref="base.group_user"/>
+	    </record>
+    </data>
+</openerp>

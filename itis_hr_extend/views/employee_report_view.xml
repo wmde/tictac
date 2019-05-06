@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+
+		<record id="itis_employee_report_tree" model='ir.ui.view'>
+			<field name="name">itis.employee.report.tree</field>
+			<field name="model">employee.report</field>
+			<field name="arch" type="xml">
+				<form string="Employees">
+					<field name='employee_ids' readonly="1">
+						<tree string="Employees" colors="orange:color=='yellow' ;red:color=='red';green:color=='green'">
+							<field name='employee_id' />
+							<field name='overtime_count' widget="float_time"/>
+							<field name='sum_leaves' />
+							<field name='sum_leaves_ny' />
+						</tree>
+					</field>
+				</form>
+			</field>
+		</record>
+
+		<record id="employee_report_action" model="ir.actions.act_window">
+			<field name="name">Employee Report</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">employee.report</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+		</record>
+
+		<menuitem name="Employee Report" parent="menu_hr_reports"
+			action="employee_report_action" id="menu_employee_report"
+			groups='base.group_user' />
+			<!--groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user' />-->
+
+
+
+	</data>
+</openerp>

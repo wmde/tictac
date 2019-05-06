@@ -1,0 +1,80 @@
+<openerp>
+    <data noupdate="1">
+        <record id="itis_close_timesheets_cron" model="ir.cron">
+            <field name="name">ITIS Timesheets Monat abschließen</field>
+            <field name="function">close_timesheet</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="nextcall" eval="(datetime.strptime('2017-01-05 03:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <record id="itis_setting_cost_center_cron" model="ir.cron">
+            <field name="name">ITIS Setting Cost Center for Existing Records</field>
+            <field name="function">set_cost_center_existing_rec</field>
+            <field name="interval_type">days</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(False)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="nextcall" eval="(datetime.strptime('2017-07-01 03:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <record id="itis_get_timesheet_overview_cron" model="ir.cron">
+            <field name="name">ITIS Get Monthly Timesheet Overview</field>
+            <field name="function">get_monthly_timesheet_overview</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="nextcall" eval="(datetime.strptime('2017-07-01 03:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <!--scheduler to create a timesheet daily basis base upon the contract-->
+        <record id="itis_create_daily_timesheet_cron" model="ir.cron">
+            <field name="name">ITIS Create Daily Timesheet</field>
+            <field name="function">create_daily_timesheet</field>
+            <field name="interval_type">days</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="nextcall" eval="(datetime.strptime('2017-05-31 02:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <!--scheduler to create a timesheet for the missing date base upon the contract-->
+        <record id="itis_create_missingdate_timesheet_cron" model="ir.cron">
+            <field name="name">ITIS Create Missing Date Timesheet</field>
+            <field name="function">create_missingdate_timesheet</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(False)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="nextcall" eval="(datetime.strptime('2017-05-31 02:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+        <!--scheduler to automatically sign out the employee which are not log out-->
+        <record id="itis_automatic_sign_out_cron" model="ir.cron">
+            <field name="name">ITIS Employee Sign Out</field>
+            <field name="function">automatic_sign_out</field>
+            <field name="interval_type">days</field>
+            <field name="interval_number">1</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="(True)"/>
+            <field name="numbercall">-1</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="nextcall" eval="(datetime.strptime('2017-05-31 20:00', '%Y-%m-%d %H:%M').strftime('%Y-%m-%d %H:%M'))"/>
+        </record>
+
+
+    </data>
+</openerp>

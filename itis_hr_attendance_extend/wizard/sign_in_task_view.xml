@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+    	<record id="sign_in_task_form_view" model='ir.ui.view'>
+    		<field name="name">sign_in_task_form_view</field>
+    		<field name="model">sign.in.task</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<group>
+            			<field name="analytic_account_id" domain="[('type', 'in', ['normal', 'contract']), ('state', '!=', 'close'), ('use_timesheets', '=', 1)]" options="{'no_open': True, 'no_create': True}" class="oe_inline" required="1"/>
+						<field name="service_desc_id" options="{'no_open': True, 'no_create': True}" class="oe_inline" widget="'selection"/>
+						<field name="emp_comment" class="oe_inline" />
+            		</group>
+            		<footer>
+            			<button name="set_task" string="OK" type="object" class='oe_highlight'/>
+            			or
+            			<button special="cancel" string="Cancel" class='oe_link' />
+            		</footer>
+            	</form>
+            </field>
+    	</record>
+    </data>
+</openerp>

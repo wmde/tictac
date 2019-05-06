@@ -1,0 +1,208 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* itis_hr_leave_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-07 13:17+0000\n"
+"PO-Revision-Date: 2017-06-07 15:19+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: itis_hr_leave_extend
+#: field:hr.config.settings,leave_account_id:0
+#: field:res.company,leave_account_id:0
+msgid "Analytic Account for Leave"
+msgstr "Kosenstelle für Urlaub"
+
+#. module: itis_hr_leave_extend
+#: field:hr.config.settings,ot_leave_account_id:0
+#: field:res.company,ot_leave_account_id:0
+msgid "Analytic Account for Overtime Leave"
+msgstr "Kostenstelle für Überstundenabbau"
+
+#. module: itis_hr_leave_extend
+#: view:hr.config.settings:itis_hr_leave_extend.view_human_resources_configuration
+msgid "Analytic account"
+msgstr "Kostenstelle"
+
+#. module: itis_hr_leave_extend
+#: view:hr.sick.leave:itis_hr_leave_extend.sick_leave_form_view
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: itis_hr_leave_extend
+#: model:ir.model,name:itis_hr_leave_extend.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,create_uid:0 field:hr.sick.leave,create_uid:0
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,create_date:0 field:hr.sick.leave,create_date:0
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: itis_hr_leave_extend
+#: field:hr.sick.leave,end_date:0
+msgid "End Date"
+msgstr "End Date"
+
+#. module: itis_hr_leave_extend
+#: model:ir.actions.act_window,name:itis_hr_leave_extend.launch_sick_leave_wizard
+msgid "Fill Employee Sick Leave"
+msgstr "Krankheitstage erfassen"
+
+#. module: itis_hr_leave_extend
+#: model:ir.actions.act_window,name:itis_hr_leave_extend.sick_leave_action
+msgid "Fill Sick Leave"
+msgstr "Krankheitstage erfassen"
+
+#. module: itis_hr_leave_extend
+#: view:hr.sick.leave:itis_hr_leave_extend.sick_leave_form_view
+msgid "Fill Sick Time"
+msgstr "Krankentage buchen."
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,holiday_id:0
+msgid "Holiday"
+msgstr "Urlaub"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,duration:0
+msgid "Hours"
+msgstr "Stunden"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,id:0 field:hr.sick.leave,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,write_uid:0 field:hr.sick.leave,write_uid:0
+msgid "Last Updated by"
+msgstr "Aktualisiert von"
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,write_date:0 field:hr.sick.leave,write_date:0
+msgid "Last Updated on"
+msgstr "Aktualisiert am"
+
+#. module: itis_hr_leave_extend
+#: model:ir.model,name:itis_hr_leave_extend.model_hr_holidays
+msgid "Leave"
+msgstr "Urlaub"
+
+#. module: itis_hr_leave_extend
+#: model:ir.model,name:itis_hr_leave_extend.model_hr_holidays_status
+msgid "Leave Type"
+msgstr "Abwesenheitstyp"
+
+#. module: itis_hr_leave_extend
+#: code:addons/itis_hr_leave_extend/models/hr_holiday.py:148
+#, python-format
+msgid "Please define cost unit for this employee."
+msgstr "Bitte definieren Sie ein Konstenjournal für diesen Mitarbeiter."
+
+#. module: itis_hr_leave_extend
+#: code:addons/itis_hr_leave_extend/models/hr_holiday.py:121
+#, python-format
+msgid ""
+"Please set the analytic account for Leaves.\n"
+"Please contact your administrator for the same."
+msgstr ""
+"Bitte hinterlegen Sie die Kostenstelle für Urlaub.Bitte kontaktieren Sie "
+"dafür Ihren Administrator."
+
+#. module: itis_hr_leave_extend
+#: code:addons/itis_hr_leave_extend/wizard/hr_sick_leave.py:55
+#, python-format
+msgid ""
+"Please set the analytic account for Sick Leaves.\n"
+"Please contact your administrator for the same."
+msgstr ""
+"Bitte hinterlegen Sie die Kostenstelle für Krankheit\n"
+"Bitte kontaktieren Sie dafür ihren Administrator."
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays.timesheet,sheet_id:0
+msgid "Sheet"
+msgstr "Sheet"
+
+#. module: itis_hr_leave_extend
+#: field:hr.sick.leave,start_date:0
+msgid "Start Date"
+msgstr "Start Date"
+
+#. module: itis_hr_leave_extend
+#: code:addons/itis_hr_leave_extend/models/hr_holiday.py:133
+#, python-format
+msgid ""
+"The Time period is allready closed. \n"
+" Please contact the Human Resource Team if the leave request should be "
+"confirmed nevertheless"
+msgstr ""
+"Die Zeiterfassung für den entsprechenden Zeitraum ist bereits "
+"abgeschlossen. \n"
+"Bitte wenden Sie sich an die Peronalabteilung, wenn der Antrag trotzdem "
+"genehmigt werden soll."
+
+#. module: itis_hr_leave_extend
+#: view:hr.sick.leave:itis_hr_leave_extend.sick_leave_form_view
+msgid "This wizard is use to fill up the time sheet when employee is sick."
+msgstr ""
+"Mit dieser Maske kann die Krankheitszeit eines Mitarbeiters in dessen "
+"Abwesenheit erfasst und gebucht werden."
+
+#. module: itis_hr_leave_extend
+#: field:hr.holidays,holidays_timesheet_ids:0
+#: field:hr.holidays.timesheet,timesheet_id:0
+#: model:ir.model,name:itis_hr_leave_extend.model_hr_timesheet_sheet_sheet
+msgid "Timesheet"
+msgstr "Zeiterfassung"
+
+#. module: itis_hr_leave_extend
+#: code:addons/itis_hr_leave_extend/models/hr_holiday.py:148
+#, python-format
+msgid "User Error!"
+msgstr "Benutzerfehler!"
+
+#. module: itis_hr_leave_extend
+#: code:addons/itis_hr_leave_extend/wizard/hr_sick_leave.py:145
+#, python-format
+msgid ""
+"User Error! \n"
+"Please define cost unit for this employee."
+msgstr ""
+"Fehler! \n"
+"Bitte legen Sie eine Kostenstelle für den Mitarbeiter fest."
+
+#. module: itis_hr_leave_extend
+#: view:hr.config.settings:itis_hr_leave_extend.view_human_resources_configuration
+msgid "for Leave"
+msgstr "für Urlaub"
+
+#. module: itis_hr_leave_extend
+#: view:hr.config.settings:itis_hr_leave_extend.view_human_resources_configuration
+msgid "for Overtime Leave"
+msgstr "für Überstundenabbau"
+
+#. module: itis_hr_leave_extend
+#: view:hr.sick.leave:itis_hr_leave_extend.sick_leave_form_view
+msgid "or"
+msgstr "or"

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+	<data>
+		<record id="emp_payroll_wiz_form_view" model='ir.ui.view'>
+			<field name="name">emp.payroll.wiz.form.view</field>
+			<field name="model">create.emp.payroll</field>
+			<field name="arch" type="xml">
+				<form>
+					<label string="Click 'Generate' button to Generate Employee report" />
+                    <group>
+                        <field name="month" required="1"/>
+                        <field name="year" required="1"/>
+                    </group>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                    </group>
+					<footer>
+						<button name='generate_employee_report' type='object' string="Generate" />
+						or
+						<button special="cancel" string="Cancel" class='oe_link' />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="emp_payroll_window_action" model="ir.actions.act_window">
+			<field name="name">Employee Payroll Report</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">create.emp.payroll</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem name="Generate Employee Payroll Report" parent="menu_hr_reports"
+			action="emp_payroll_window_action" id="menu_emp_payroll_report_generate"
+			groups='base.group_hr_payroll_manager,base.group_hr_manager,base.group_hr_user'/>
+
+
+
+		<record id="emp_payroll_export_form_view" model='ir.ui.view'>
+			<field name="name">emp.payroll.export.form.view</field>
+			<field name="model">export.emp.payroll</field>
+			<field name="arch" type="xml">
+				<form>
+					<label string="Click 'Export' button to export Employee Report csv" />
+					<div attrs="{'invisible': [('name', '=', False)]}">
+                        <p>Export file: <field name="name" readonly="1" filename="file_name"/></p>
+                    </div>
+					<field name='file_name' invisible="1"/>
+					<footer>
+						<button name='export_csv' type='object' string="Export" />
+						or
+						<button special="cancel" string="Cancel" class='oe_link' />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="emp_payroll_export_action" model="ir.actions.act_window">
+			<field name="name">Employee Report Export</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">export.emp.payroll</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+        <act_window id="launch_emp_payroll_export_wizard"
+            name="Employee Report Export"
+            src_model="employee.payroll.report"
+            res_model="export.emp.payroll"
+            view_mode="form,tree"
+            target="new"
+            key2="client_action_multi"/>
+
+
+
+
+	</data>
+</openerp>
